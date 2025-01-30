@@ -67,24 +67,6 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
-  .login-button {
-    background-color: #1a1547;
-    color: white;
-    height: 40px;
-    text-align: center;
-    width: 90px;
-    border-radius: 15px;
-  }
-  
-  .signup-button {
-    background-color: #1a1547;
-    color: white;
-    height: 40px;
-    text-align: center;
-    width: 12%;
-    border-radius: 10px;
-    
-  }
   .load-button {
     background-color: #020111;
     border-radius: 60px;
@@ -520,7 +502,7 @@ background-color: #f3b07a;
 .login-button, .signup-button {
     padding: 10px 20px;
     margin-left: 10px;
-    background-color: #007BFF;
+    background-color: #070849;
     color: white;
     border: none;
     cursor: pointer;
