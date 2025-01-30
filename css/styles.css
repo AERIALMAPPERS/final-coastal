@@ -98,7 +98,7 @@ header {
 .header h1 {
   /* font-size:xx-large; */
   font-size: 3rem;
-  color: #0e5e2d;
+  color: #07110b;
  
 }
 /* //////////////////////////////////login button///////////////////////////////////////////////// */
@@ -643,7 +643,7 @@ nav a:hover {
   .header h1 {
     /* font-size:xx-large; */
     font-size: 1.3rem;
-    color: #333;
+    color: #07110b;
   }
 
   #liveDate {
@@ -742,12 +742,12 @@ nav a:hover {
   .header h1 {
     /* font-size:xx-large; */
     /* font-size: 1.8rem; */
-    color: #333;
+    color: #07110b;
   }
   .header h1 {
     /* font-size:xx-large; */
     font-size: 1.2rem;
-    color: #333;
+    color: #07110b;
   }
   button {
     display: block;
