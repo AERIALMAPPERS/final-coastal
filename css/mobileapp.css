@@ -1,0 +1,153 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Subtle background color */
+}
+
+/* Header styling */
+.Mobile {
+  text-align: center;
+  padding: 20px;
+  color: rgb(5, 3, 3);
+  /* Uncomment and modify background color as needed */
+  /* background-color: #3c72b8; */
+}
+
+/* Main content section */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Left section styling */
+.left-section {
+  width: 20%; /* Fixed width for the left section */
+  text-align: center;
+  background-color: #b8ddf7;
+  padding: 20px;
+  margin-left: 5%;
+  border-radius: 10px;
+  box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+.left-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Right section styling */
+.right-section {
+  flex-grow: 1; /* Right section takes up remaining space */
+  max-width: 65%; /* Limit width of right section */
+  height: 80vh;
+  background-color: #3c80b8;
+  background-image: url('../image/bgmb.jpg'); /* Replace with your actual image path */
+  background-size: cover; /* Ensure the background image covers the container */
+  background-position: center;
+  padding: 20px;
+  margin-right: 5%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: white; /* Ensure text is readable */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Carousel styling */
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden; /* Hide any overflow of slides */
+}
+
+.slide {
+  display: block; /* Display all slides */
+  width: 100%; /* Each slide takes up 100% width of the container */
+  height: 100%;
+  text-align: center;
+  font-size: 24px;
+  transition: transform 0.5s ease-in-out; /* Smooth slide transition */
+}
+
+.slide img {
+  margin-top: 10%;
+  width: 25%;
+  height: 65%;
+  border: 5px solid #e2d4d4; /* Darker border to resemble a phone frame */
+  border-radius: 15px; /* Rounded corners to mimic a phone's edges */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a shadow for a 3D phone effect */
+  position: relative; /* Ensure it stays in position inside the slide */
+}
+
+/* Optional: Add a 'home button' effect */
+.slide img:before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 6px;
+  background-color: #f7f1f1;
+  border-radius: 10px; /* Rounded edges for the home button */
+}
+
+/* Navigation buttons for carousel */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Stack sections vertically */
+  .main-content {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%; /* Make both sections take up full width */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .carousel-item .phone-frame {
+    width: 80%; /* Make phone frame smaller on smaller screens */
+    height: auto; /* Adjust height to content */
+  }
+
+  .carousel-caption {
+    font-size: 14px; /* Smaller font for captions */
+  }
+}

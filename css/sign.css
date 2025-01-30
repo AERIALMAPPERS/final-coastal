@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto; 
+    /* width: 50%; */
+    margin: 0;
+    
+}
+.message-container {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    background-color: #e4e1e1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 40vh;
+    max-width: 800px;
+    
+}
+.login-button {
+    background-color: #1a1547;
+    color: white;
+    height: 40px;
+    width: 90px;
+    border-radius: 15px;
+}
+.signup-button {
+    background-color: #1a1547;
+    color: white;
+    height: 40px;
+    width: 95px;
+    border-radius: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="state"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #050505;
+}
+
+input[type="submit"],
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #020a36;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.password-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.show-password {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.country-code-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.country-code {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.mobile-number {
+    width: calc(100% - 120px); /* Subtracting the width of the country code */
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+select {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+
+button {
+    justify-content: center;
+    width: 65%;
+    padding: 10px;
+    background-color: #020a36;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #094ece;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Less padding on mobile */
+    }
+
+    form {
+        width: 100%; /* Make the form full width on mobile */
+    }
+
+    .country-code-wrapper {
+        flex-direction: column; /* Stack country code and phone number */
+        align-items: flex-start;
+    }
+
+    .country-code, .mobile-number {
+        width: 100%; /* Full width inputs */
+    }
+
+    .login-button, .signup-button {
+        width: 100%; /* Make buttons full width */
+    }
+}
