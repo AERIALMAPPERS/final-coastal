@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/sign.css">
+</head>
+
+<body>
+    <div id="messageContainer" class="message-container">
+        <h2>Create an Account First</h2>
+        <p>You need to create an account before you can access this page.</p>
+        <p>If you already have an account, you can log in.</p>
+        <div class="button-container">
+            <!-- <img src="/sign_up.html"> -->
+            <button class="login-button" onclick="window.location.href='./login.html'">Login</button>
+            <button class="signup-button" onclick="toggleSignupForm()">Sign Up</button>
+        </div>
+    </div>
+
+    <div id="signupFormContainer" style="display:none;">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" name="password" required>
+                <img width="20" height="20" src="https://img.icons8.com/material-rounded/24/visible.png"
+                    alt="eye-symbol" id="eyeIcon" onclick="togglePasswordVisibility()">
+            </div>
+            <br><br>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" class="mobile-number" required maxlength="13"
+                placeholder="Enter mobile number (+91)" oninput="validateMobileNumber()"><br><br>
+
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required><br><br>
+            <!-- <option value="Maharashtra">Maharashtra</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Goa">Goa</option> -->
+            <!-- </select><br><br> -->
+
+            <label for="authority">Authority:</label>
+            <select id="authority" name="authority" required>
+                <option value="">Select</option>
+                <option value="circle">Circle</option>
+                <option value="region">Region</option>
+                <option value="division">Division</option>
+                <option value="subdivision">Subdivision</option>
+                <option value="mantralaya">Mantralaya</option>
+                <option value="other">other</option>
+            </select><br><br>
+
+            <label for="authority_name">Authority Name:</label>
+            <input type="text" id="authority_name" name="authority_name" required><br><br>
+
+            <button type="submit">Create Account</button><br><br>
+            <button type="button" onclick="window.location.href='/login.html'">GO for Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to show the sign-up form and hide the message container
+        function showSignupForm() {
+            document.getElementById('messageContainer').style.display = 'none';
+            document.getElementById('signupFormContainer').style.display = 'block';
+        }
+        //////////////////////////////////////
+        function toggleSignupForm() {
+            const messageContainer = document.getElementById('messageContainer');
+            const signupFormContainer = document.getElementById('signupFormContainer');
+
+            if (signupFormContainer.style.display === 'block') {
+                signupFormContainer.style.display = 'none';
+                messageContainer.style.display = 'block';
+            } else {
+                messageContainer.style.display = 'none';
+                signupFormContainer.style.display = 'block';
+            }
+        }
+
+
+
+        //////////////////////////////////////////////
+        // Toggle password visibility
+        function togglePasswordVisibility() {
+            const passwordField = document.getElementById('password');
+            const confirmPasswordField = document.getElementById('confirmPassword');
+            const eyeIcon = document.getElementById('eyeIcon');
+
+            // Toggle password visibility
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                confirmPasswordField.type = "text";
+                eyeIcon.src = "https://img.icons8.com/material-rounded/24/invisible.png"; // Change to invisible eye icon
+            } else {
+                passwordField.type = "password";
+                confirmPasswordField.type = "password";
+                eyeIcon.src = "https://img.icons8.com/material-rounded/24/visible.png"; // Change to visible eye icon
+            }
+        }
+
+        // Mobile Number Validation Function
+        function validateMobileNumber() {
+            const mobileField = document.getElementById('mobile');
+            const mobileNumber = mobileField.value;
+
+            // If mobile number doesn't start with +91, add it to the front
+            if (!mobileNumber.startsWith('+91') && mobileNumber.length <= 13) {
+                mobileField.value = '+91' + mobileNumber.substring(1);
+            }
+
+            // Validate if the mobile number has a total of 13 characters (including country code)
+            if (mobileNumber.length === 13) {
+                mobileField.setCustomValidity('');
+            } else {
+                mobileField.setCustomValidity('Please enter a valid 10-digit mobile number starting with +91');
+            }
+        }
+
+
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const state = document.getElementById('state').value;
+            const authority = document.getElementById('authority').value;
+            const authority_name = document.getElementById('authority_name').value;
+
+            // Check if the selected authority is "other" or not one of the authorized options
+            const authorizedAuthorities = ["circle", "region", "division", "subdivision", "mantralaya"];
+            if (authority === "other") {
+                alert("You are not an authorized person. Please contact an authorized person to get permission.");
+                return; // Stop form submission if "Other" is selected
+            }
+
+            if (!authorizedAuthorities.includes(authority)) {
+                alert("You are not an authorized person. Please contact an authorized person to get permission.");
+                return; // Stop form submission if the authority is not one of the authorized ones
+            }
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            const userData = {
+                username,
+                password,
+                email,
+                mobile,
+                state,
+                authority,
+                authority_name
+            };
+
+            // Send user data to backend (ensure the backend is ready for this route)
+            fetch('http://localhost:3000/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    if (data.message === 'User created successfully!') {
+                        window.location.href = '/login.html'; // Redirect to login page after successful account creation
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error creating account');
+                });
+        });
+    </script>
+</body>
+
+</html>
