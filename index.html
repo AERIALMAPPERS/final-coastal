@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastline Of Maharashtra</title>
+    <link rel="icon" type="image/png" href="./image/logo/favicon.png">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <div id="zoomButtons">
+        <div class="content">
+            <button aria-label="Decrease text size" onclick="zoomOut()">A-</button>
+            <button aria-label="Reset text size" onclick="resetZoom()">A</button>
+            <button aria-label="Increase text size" onclick="zoomIn()">A+</button>
+            |
+            <span id="liveDate"></span>
+        </div>
+        <div id="google_translate_element" aria-label="Language Translate Widget" role="region" aria-live="polite">
+        </div>
+    </div>
+
+
+    <!-- HEADING -->
+    <header>
+        <div class="header">
+            <img src="./image/logo/logo1.jpeg" alt="gov logo">
+            <h1>Maharashtra <br>Coastline</h1>
+            <img src="./image/logo/coastl.png" alt="coastal img" id="coastal-logo">
+            <div id="govImg">
+                <img src="./image/index/75th.jpg" alt="gov logo">
+                <img src="./image/index/g20.jpg" alt="gov logo">
+                <img src="./image/index/mygov.png" alt="gov logo">
+                <img src="./image/index/p4.png" alt="gov logo">
+                <img src="./image/index/p8.png" alt="gov logo">
+            </div>
+            <button class="login-button" onclick="window.location.href='/login.html'">Login</button>
+            <button class="signup-button" onclick="window.location.href='/sign_up.html'">Sign_Up</button>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+            <a href="service.html" class="dropbtn">Technology</a>
+            <div class="dropdown-content">
+                <a href="mobileapp.html">Mobile-App</a>
+            </div>
+        </div>
+        <a href="features.html">Report</a>
+        <div class="dropdown">
+            <a href="gallery.html" class="dropbtn">Gallery</a>
+            <div class="dropdown-content">
+                <a href="gallery.html">Photo Gallery</a>
+                <a href="video.html">Video Gallery</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="sign_up.html" class="dropbtn">Project Data</a>
+            <div class="dropdown-content">
+                <a href="sign_up.html">Village Wise Data</a>
+                <a href="sign_up.html">Taluka Wise Data</a>
+                <a href="sign_up.html">District Wise Data</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="contact.html" class="dropbtn">Contact-Us</a>
+            <div class="dropdown-content">
+                <a href="feedback.html">Feedback</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <br> -->
+
+    <div class="marquee-container">
+        <div class="marquee" aria-live="polite">
+            Government of Maharashtra | Maharashtra Coastline Project 2023-2024 | Develop a web-based system to search,
+            view, and
+            download geo-referenced village digital maps ,CRZ maps, ECW of coastal areas,DEM , CONTOUR , DGPS & other
+            details of
+            villages in the coastline area of Maharashtra .
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+
+        <div class="mySlides">
+            <img src="./image/banner/Banner3.png" alt="slide img">
+        </div>
+        <div class="mySlides">
+            <img src="./image/banner/Banner2.jpg" alt=" slide img2" id="img2">
+        </div>
+        <div class="mySlides">
+            <img src="./image/banner/PORTS.jpg" alt="slide img3">
+        </div>
+        <div class="mySlides">
+            <img src="./image/banner/mangrove1.jpg" alt="slide img 4" id="img3">
+        </div>
+        <div class="mySlides">
+            <img src="./image/banner/Banner5.png" alt="slide img 5" id="img4">
+        </div>
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
+        <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+    </div>
+
+    <!-- main -->
+    <main>
+        <div class="service">
+            <br>
+            <br>
+            <div class="head">
+                <h1>Introduction</h1>
+                <hr>
+                <br>
+                <p>Maharashtra is the second most populous and third largest state of India. It spread over 307713 Sq.
+                    Km and situated over west coast Of India
+                    Maharashtra occupies the western and central part of the country and as per statistical data
+                    available,
+                    Maharashtra has long Coastline stretching 720 kilometers along the Arabian Sea, which is
+                    divided,among six districts as under palghar district 110.50,Thane 16.50
+                    Mumbai City & Mumbai Suburban 114.00,Raigad 121.00 Ratnagiri 238.00 ,Sindhudurg 120.00 Total 720.00.
+                    out of this 720 Kms Coastal length 400 Kms length is naturally protected, & About 320 Kms length is
+                    vulnerable to erosion.out of this,
+                    protection for 145 Kms has been protected by artificial means such as Construction of Anti Sea
+                    Erosion Bund,
+                    Sea Wall, and Beach Nourishment inform Of Geotubes etc. the remaining length is yet to be
+                    protected.<br>
+                    Coastal zone monitoring and management is an important task in sustainable development and
+                    environmental monitoring.
+                    Coast line/ Shoreline is one of the most important linear dynamic features in the earth and its
+                    movement due to erosion and deposition is of great Significance in coastal
+                    zone management such as development of setback planning, hazard zoning,erosion accretion studies,
+                    regional Sediment budgets and modeling of coastal morph dynamics.
+                    From the last few year severe loss has been reported in all coastal District of Maharashtra owing
+                    ingress of tidal water in urban and rural area, due to climate change,
+                    tidal fluctuation, Urbanization etc.
+                </p>
+
+            </div>
+            <div class="load-button">
+                <button id="load-more" aria-label="Load more about" onclick="showAbout()">LOAD MORE</button>
+            </div>
+
+            <!-- /////////////////////////////////////////////////////Region start///////////////////////////////////////////////////// -->
+            <div class="mainbox">
+                <div class="Region">
+
+
+                    <h1>Region </h1>
+                    <ul class="image-list">
+                        <li><a href="#" onclick="displayImage(event, './image/about/palghar.jpg')">Palghar Region</a>
+                        </li>
+                        <li><a href="#" onclick="displayImage(event, './image/about/Raigadf.jpg')">Raigad Region</a>
+                        </li>
+                        <li><a href="#" onclick="displayImage(event, './image/about/Mumbai.jpg')"> Mumbai Region</a>
+                        </li>
+                        <li><a href="#" onclick="displayImage(event, './image/about/Thanef.jpg')"> Thane Region</a></li>
+                        <li><a href="#" onclick="displayImage(event, './image/about/Ratnagiriff.jpg')">Ratnagiri Region</a></li>
+                        <li><a href="#" onclick="displayImage(event, './image/about/Sindhudurg.jpg')">SindhudurgRegion</a></li>
+                    </ul>
+                </div>
+                <br>
+                <div class="map-img">
+                    <img alt="Region img" id="displayedImage" src="./image/about/img3.png">
+                    <button id="A1" onclick="displayImage(event,'./image/about/img3.png')">State</button>
+                    <button id="A2" onclick="displayImage(event,'./image/about/costal.png')">Region</button>
+                    <button id="A3" onclick="displayImage(event,'./image/about/img1.jpg')">Circle</button>
+                    <button id="A4" onclick="displayImage(event,'./image/about/img3.png')">Back</button>
+
+                </div>
+            </div>
+
+
+            <!-- ////////////////////////////////////////////////////Region End //////////////////////////////////////////////////////////////////// -->
+            <!-- /////////////////////////////////////////////////News Section ..///////////////////////////////////////////////// -->
+            <section class="s1">
+                <br>
+                <div class="section_container">
+                    <div class="gallery_container" id="left_container">
+
+                        <div class="left_gallery">
+
+                            <div class="news-section">
+                                <div class="news-header">Latest News</div>
+                                <ul class="news-list" id="news-list">
+                                    <!-- News items will be dynamically added here -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="left_video">
+                            <video autoplay muted>
+                                <source src="./img/CoastalVideo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="map_container" id="right_container">
+
+                        <div class="right_image">
+                            <img src="./img/mapMaharashtraB.jpg" alt="Maharashtra map image">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- //////////////////////////////////////////////////////News section end ////////////////////////////////////////////////// -->
+
+            <!-- /////////////////////////////////////////////////Key features start///////////////////////////////// -->
+
+
+            <section class="key-features">
+                <h2>Key Features</h2>
+                <div class="features-container">
+                    <div class="feature-card">
+                        <img src="./image/index/organization.png" alt="Organized Data Icon">
+                        <h3>Organized Data</h3>
+                        <p>Access data organized by village, taluka, and district for efficient management.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="./image/index/protection.png" alt="Vulnerability Assessment Icon">
+                        <h3>Vulnerability Assessment</h3>
+                        <p>Analyze and monitor coastal vulnerabilities with comprehensive data.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="./image/index/archiving.png" alt="Orthomosaic and DEM Icon">
+                        <h3>Orthomosaic and DEM/DSM Storage</h3>
+                        <p>Store and manage orthomosaic images, DSM, and DEM data with ease.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ////////////////////////////////////////////Key features end//////////////////////////////////////////////////////// -->
+            <!-- /////////////////////////////////////////////////////Output Gallery///////////////////////////////////////////////////////////////// -->
+
+            <div class="end">
+                <h2>Output Gallery</h2>
+                <br>
+                <div class="box">
+
+                    <div class="campus">
+                        <img src="./image/index/pointcloud.png" alt=" Drone img" id="img1-1">
+                        <div class="layer">
+                            <h3>Point Cloud</h3>
+                        </div>
+                    </div>
+                    <div class="campus">
+                        <img src="./image/index/dsmanddtm.png" alt=" Drone img 1" id="img1-2">
+                        <div class="layer">
+                            <h3>DSM & DTM</h3>
+                        </div>
+                    </div>
+                    <div class="campus">
+                        <img src="./image/index/img5.JPG" alt=" Gis img" id="img2-1">
+                        <div class="layer">
+                            <h3>Ecw</h3>
+                        </div>
+                    </div>
+                    <div class="campus">
+                        <img src="./image/service/GIS1.png " alt=" Gis img 2" id="img2-2">
+                        <div class="layer">
+                            <h3>Gis</h3>
+                        </div>
+                    </div>
+                    <div class="campus">
+                        <img src="./image/index/crzmap.jpg" alt=" Dsm and Dtm img" id="img3-1">
+                        <div class="layer">
+                            <h3>CRZ Map </h3>
+                        </div>
+                    </div>
+                    <div class="campus">
+                        <img src="./image/service/3-D.png" alt=" 3d Model img" id="img4-1">
+                        <div class="layer">
+                            <h3>3-D Model</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <div class="load-button">
+                <button aria-label="Load more services" onclick="showService()">LOAD MORE</button>
+            </div>
+
+        </div>
+
+
+        <!-- //////////////////////////////////////////////////////////output gallery end//////////////////////////////////////////////////////// -->
+        <!-- ////////////////////////////////////////////////////////////////////////Goverment imgs start///////////////////////////////////////////////////////////////// -->
+        <!-- Govt.Image -->
+        <div class="govt-img">
+            <br>
+            <div class="img-div">
+                <img src="./image/Govt-Img/p1.jpg" alt=" Gov Imges of digital india" onclick="digitalIndia()"
+                    aria-label="Go to Digital India page">
+                <img src="./image/Govt-Img/p2.png" alt=" gov img of mudra" onclick="Mudra()"
+                    aria-label="Go to mmudra page">
+                <img src="./image/Govt-Img/p3.webp" alt="gov img of swatch bharat" onclick="swatchBharat()"
+                    aria-label="Go to swatchBharat page">
+                <img src="./image/Govt-Img/p4.png" alt="Gov img of Skill india" onclick="skillIndia()"
+                    aria-label="Go to skillIndia page">
+                <img src="./image/Govt-Img/p5.jpg" alt="Gov img of g20" onclick="g2O()" aria-label="Go to g2O page">
+                <img src="./image/Govt-Img/p6.jpg" alt="mygoverment img" onclick="myGov()"
+                    aria-label="Go to myGov page">
+                <img src="./image/Govt-Img/p7.png" alt="gov adhar img" onclick="aadhar()"
+                    aria-label="Go to aadhar page">
+                <img src="./image/Govt-Img/p8.png" alt="gov of indiaa img" onclick="govtOfIndia()"
+                    aria-label="Go to govtOfIndia page">
+                <img src="./image/Govt-Img/p9.jpg" alt="gov of lokpal img" onclick="lokpal()"
+                    aria-label="Go to lokpal page">
+                <img src="./image/Govt-Img/p10.png" alt="gov of worldFoodIndia img" onclick="worldFoodIndia()"
+                    aria-label="Go to worldFoodIndia page">
+                <img src="./image/Govt-Img/p11.png" alt="indian posr img" onclick="IndianPost()"
+                    aria-label="Go to IndianPost page">
+                <img src="./image/Govt-Img/p12.png" alt="my gov img" onclick="myGov()" aria-label="Go to myGov page">
+            </div>
+        </div>
+        <br>
+
+    </main>
+
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- Services Section -->
+            <div class="service1">
+                <h3><a href="./service.html" aria-label="View available services">Technology</a></h3>
+                <ul>
+                    <li><a href="service.html">Lidar Technology</a></li>
+                    <li><a href="service.html">Bathymetry Technology</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features">
+                <h3><a href="./features.html" aria-label="View available features">Features</a></h3>
+                <ul>
+                    <li>Advanced Equipment</li>
+                    <li>Team of Expert</li>
+                    <li>99% Accuracy</li>
+                    <li>5x Faster Delivery</li>
+                    <li>One to One Support</li>
+                </ul>
+            </div>
+
+            <!-- Policies Section -->
+            <div class="policies">
+                <h3>People and Policies</h3>
+                <ul>
+                    <li><a href="./disclaimer.html" aria-label="Read our Disclaimer">Disclaimer </a></li>
+                    <li><a href="./policy.html" aria-label="Privacy Policy">Privacy Policy</a></li>
+                    <li><a href="https://igod.gov.in/" aria-label="GOI Web Directory">GOI Web Directory</a></li>
+                </ul>
+            </div>
+
+            <!-- Planning Section -->
+            <div class="planning">
+                <h3><a href="./planning.html" aria-label="View available planning">Planning</a></h3>
+                <ul>
+                    <li><a href="#" aria-label="Learn more about Scheduling">Scheduling</a></li>
+                    <li><a href="#" aria-label="Learn more about Planning">Planning</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Details Section -->
+            <div class="contact-details">
+                <h3><a href="contact.html" aria-label="View available Contact">Contact Details</a></h3>
+                <ul>
+                    <li>
+                        <p>Harbour Engineer, Harbour Engineering Division, Konkan Bhavan, Navi Mumbai (New Mumbai)
+                            400614.</p>
+                    </li>
+                    <li>
+                        <p>Contact No: +91 22 2757 1537</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Images Section -->
+        <div class="footer_img">
+            <div class="marquee-container" role="region">
+                <div class="marquee-1">
+                    <img src="./image/footer/p1.jpg" alt="footer img of gov">
+                    <img src="./image/footer/p2.png" alt="footer img of gov">
+                    <img src="./image/footer/p3.webp" alt="footer img of gov">
+                    <img src="./image/footer/p4.png" alt="footer img of gov">
+                    <img src="./image/footer/p5.jpg" alt="footer img of gov">
+                    <img src="./image/footer/p6.png" alt="footer img of gov">
+                    <img src="./image/footer/p7.png" alt="footer img of gov">
+                    <img src="./image/footer/p8.jpg" alt="footer img of gov">
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="copyright">
+            &copy; 2023 Maharashtra Coastal | Harbour Engineering Division, Konkan Bhavan, Navi Mumbai | All rights
+            reserved.
+        </div>
+
+        <!-- W3C CSS Validator Section -->
+        <div class="w3">
+            <p>
+                <a href="https://validator.w3.org/check?uri=https://aerialmappers.github.io/MH-CostalProject/"
+                    target="_blank">
+                    <img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88">
+                </a>
+                <a href="http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Faerialmappers.github.io%2FMH-CostalProject%2F&usermedium=all&vextwarning=&warning=1"
+                    aria-label="Check CSS validity using W3C CSS Validator" target="_blank">
+                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="css validation result !">
+                </a>
+            </p>
+        </div>
+    </footer>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/liveDate.js"></script>
+    <script src="./js/zoomInOut.js"></script>
+    <script src="./js/translate.js"></script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>
