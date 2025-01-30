@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastline Of Maharashtra</title>
+    <link rel="icon" type="image/png" href="./image/logo/favicon.png">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/pie.css">
+</head>
+
+<body>
+
+    <div id="zoomButtons">
+        <div class="content">
+            <button aria-label="Decrease text size" onclick="zoomOut()">A-</button>
+            <button aria-label="Reset text size" onclick="resetZoom()">A</button>
+            <button aria-label="Increase text size" onclick="zoomIn()">A+</button>
+            |
+            <span id="liveDate"></span>
+        </div>
+        <div id="google_translate_element" aria-label="Language Translate Widget" role="region" aria-live="polite">
+        </div>
+    </div>
+
+
+    <!-- HEADING -->
+    <header>
+        <div class="header">
+            <img src="./image/logo/logo1.jpeg" alt="gov logo">
+            <h1>Maharashtra <br>Coastline</h1>
+            <img src="./image/logo/coastl.png" alt="coastal img" id="coastal-logo">
+            <div id="govImg">
+                <img src="./image/index/75th.jpg" alt="gov logo">
+                <img src="./image/index/g20.jpg" alt="gov logo">
+                <img src="./image/index/mygov.png" alt="gov logo">
+                <img src="./image/index/p4.png" alt="gov logo">
+                <img src="./image/index/p8.png" alt="gov logo">
+            </div>
+            <button class="login-button" onclick="window.location.href='/login.html'">Login</button>
+            <button class="signup-button" onclick="window.location.href='/sign_up.html'">Sign_Up</button>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+            <a href="service.html" class="dropbtn">Technology</a>
+            <div class="dropdown-content">
+                <a href="mobileapp.html">Mobile-App</a>
+            </div>
+        </div>
+        <a href="features.html">Report</a>
+        <div class="dropdown">
+            <a href="gallery.html" class="dropbtn">Gallery</a>
+            <div class="dropdown-content">
+                <a href="gallery.html">Photo Gallery</a>
+                <a href="video.html">Video Gallery</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="sign_up.html" class="dropbtn">Project Data</a>
+            <div class="dropdown-content">
+                <a href="sign_up.html">Village Wise Data</a>
+                <a href="sign_up.html">Taluka Wise Data</a>
+                <a href="sign_up.html">District Wise Data</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="contact.html" class="dropbtn">Contact-Us</a>
+            <div class="dropdown-content">
+                <a href="feedback.html">Feedback</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <br> -->
+
+    <div class="marquee-container">
+        <div class="marquee">
+            Government of Maharashtra | Maharashtra Coastline Project 2023-2024 | Develop a web-based system to search,
+            view, and
+            download geo-referenced village digital maps ,CRZ maps, ECW of coastal areas,DEM , CONTOUR , DGPS & other
+            details of
+            villages in the coastline area of Maharashtra .
+        </div>
+    </div>
+
+    <main>
+        <!-- about detail -->
+        <div class="about-detail">
+            <h2>About</h2>
+            <div id="about-content">
+                <div class="p">
+                    <p>The objective of the project is to delineate, map and benchmark the coastal hazard line all along
+                        the mainland coast of Maharashtra.<br>
+                        At present Erosion Control Measures works are proposed in state budget as per the demand of
+                        local villagers, representative of state (MLA & MP),
+                        local authorities such as Grampanchayat & fisheries society etc.
+                        As and when demanded the Erosion Control Measures works are considered as per availability of
+                        fund.
+                        Due to non availability of Vulnerability index, Department is not able to decided upon priority
+                        of works on technical grounds instead it is decided upon the demand & urgency on that time.
+                        In view of the above circumstances a thorough survey of coastline with latest technology is
+                        required for preparing Coastal Management Plan for erosion control measures
+                        to ensure effective protection of shore lines, coastal infrastructure, livelihoods and
+                        lives.<br>
+                        Under this program, fixing the benchmark all along the Maharashtra Coastline, collecting the
+                        ground truth information with detailed topography survey,
+                        generating coastal vulnerability map for erosion and finally develop and establish the web
+                        database server to upload and save generated results and data for further
+                        sharing and monitoring purpose
+
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="./image/about/img1.png" alt="img1">
+                </div>
+            </div>
+        </div>
+
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <div class="project-brief">
+
+            <div id="brief-content">
+                <!-- <div class="img"> -->
+                <!-- pie chart -->
+                <!-- <img src="./image/about/barchart.jpg" alt="" id="barchart"> -->
+                <div id="myChart">
+                </div>
+                <div class="brief-p">
+                    <h2>Project Brief</h2>
+                    <br>
+                    <p> The main scope of work includes establishing the BM all along the Maharashtra coastline of
+                        around 720 km at every 10 km with an chainage of 500 meter. All the BM and chainage points
+                        should be marked with standard dimension stone.
+                        Carry out the drone topography lidar survey / Aerial Topography lidar survey with a GSD less
+                        than 5 cm of ground area / ground and accuracy
+                        of 5 c only in all directions / with an accuracy of less than 5 cm. in all X-Y-Z direction
+                        of entire 720 km Maharashtra coastline with a width of approx. 800 to 1000 meter depending on
+                        the coast.
+                        Data will be collected in such a way that waterline should be clearly visible.<br>
+                        Date and time period should be recorded at the time data collection for estimation of tidal
+                        level. Generation of Orthomosaic image and Point cloud data will be
+                        highly accurate with respect to MSL.
+                        The point cloud generated from the lidar should be RGB enable and all the point cloud should be
+                        required classified as per standard class defined by authority,
+                        multibeam bathymetry survey using USV is necessary to identify the bed
+                        of sea shore to Identification of all coastal structure like – sea wall, groins etc. which
+                        effect the coastal vulnerability.
+                        All the data will be generated as per the taluka wise existing protection structure.
+                        <br><br>
+                        Generate the coastal erosion & accretion vulnerability map of entire Maharashtra coastline.
+                        Consider both environmental and social parameter to estimate vulnerability.
+                        Estimate the long term and short-term erosion pattern starting from 1990 to present. Result will
+                        be represented in term taluka, district and state wise vulnerability
+                        map generated over Drone captured image.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <!-- ////////////////////////////////////////////////////////////////////////////// -->
+        <div class="about-detail1">
+            <h2>Work Flow</h2>
+            <div id="about-content1">
+                <div class="p">
+                    <p>1.Fixing Benchmark and establishing coastal chainage<br><br>
+                        2.Drone Topography lidar survey /Aerial Topography lidar survey<br><br>
+                        3.Multibeam Bathymetry using USV<br><br>
+                        4.Vulnerability map generation<br><br>
+                        5.Web base portal and mobile app development with hardware server setup<br><br>
+
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="./image/about/workflow2.png" alt="img1">
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <!-- //////////////////////////////////////////////////////////////////////////////////   -->
+        <!-- sliding image -->
+        <div class="sliding">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="./image/about-sliding/india.jpg" alt="Slide 1">
+                </div>
+                <div class="mySlides fade">
+                    <img src="./image/about-sliding/3.jpg" alt="Slide 2">
+                </div>
+                <div class="mySlides fade">
+                    <img src="./image/about-sliding/img1.jpg" alt="Slide 3">
+                </div>
+                <!-- Navigation dots -->
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <!-- ////////////////////////////////////////////////////////////////////////// -->
+        <div class="govt-img">
+            <br>
+            <div class="img-div">
+                <img src="./image/Govt-Img/p1.jpg" alt=" Gov Imges of digital india" onclick="digitalIndia()"
+                    aria-label="Go to Digital India page">
+                <img src="./image/Govt-Img/p2.png" alt=" gov img of mudra" onclick="Mudra()"
+                    aria-label="Go to mmudra page">
+                <img src="./image/Govt-Img/p3.webp" alt="gov img of swatch bharat" onclick="swatchBharat()"
+                    aria-label="Go to swatchBharat page">
+                <img src="./image/Govt-Img/p4.png" alt="Gov img of Skill india" onclick="skillIndia()"
+                    aria-label="Go to skillIndia page">
+                <img src="./image/Govt-Img/p5.jpg" alt="Gov img of g20" onclick="g2O()" aria-label="Go to g2O page">
+                <img src="./image/Govt-Img/p6.jpg" alt="mygoverment img" onclick="myGov()"
+                    aria-label="Go to myGov page">
+                <img src="./image/Govt-Img/p7.png" alt="gov adhar img" onclick="aadhar()"
+                    aria-label="Go to aadhar page">
+                <img src="./image/Govt-Img/p8.png" alt="gov of indiaa img" onclick="govtOfIndia()"
+                    aria-label="Go to govtOfIndia page">
+                <img src="./image/Govt-Img/p9.jpg" alt="gov of lokpal img" onclick="lokpal()"
+                    aria-label="Go to lokpal page">
+                <img src="./image/Govt-Img/p10.png" alt="gov of worldFoodIndia img" onclick="worldFoodIndia()"
+                    aria-label="Go to worldFoodIndia page">
+                <img src="./image/Govt-Img/p11.png" alt="indian posr img" onclick="IndianPost()"
+                    aria-label="Go to IndianPost page">
+                <img src="./image/Govt-Img/p12.png" alt="my gov img" onclick="myGov()" aria-label="Go to myGov page">
+            </div>
+        </div>
+        <br>
+    </main>
+
+    <!-- ////////////////////////////////////////////// -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="service1">
+                <h3><a href="./service.html">Technology</a></h3>
+                <ul>
+                    <li><a href="./service.html">Lidar Technology</a></li>
+                    <li><a href="./service.html">Bathymetry Technology</a></li>
+
+                </ul>
+            </div>
+
+            <div class="features">
+                <h3><a href="./features.html">Features</a></h3>
+                <ul>
+                    <li>Advanced Equipment</li>
+                    <li>Team of Expert</li>
+                    <li>99% accuracy</li>
+                    <li>5x faster Dilivary</li>
+                    <li>one to one Support</li>
+                </ul>
+            </div>
+
+            <div class="policies">
+                <h3>Peoples and Policies</h3>
+                <ul>
+                    <li><a href="./disclaimer.html">Disclaimer</a></li>
+                    <!-- <li>Disclaimer</li> -->
+                    <!-- <li>Who is Who</li> -->
+                    <li><a href="./policy.html">Privacy Policy</a></li>
+                    <!-- <li>Privacy Policy</li> -->
+                    <li><a href="https://igod.gov.in/">GOI Web Directory</a></li>
+                    <!-- <li>GOI Web Directory</li> -->
+                </ul>
+            </div>
+
+            <div class="planning">
+                <h3><a href="./planning.html">Planning</a></h3>
+                <ul>
+                    <li><a href="#">Scheduling</a></li>
+                    <li><a href="#">Planning</a></li>
+                </ul>
+            </div>
+
+            <div class="contact-details">
+
+                <h3><a href="#/contact.html">Contact Details</a></h3>
+                <ul>
+                    <li>
+                        <p>Harbour Engineer, Harbour Engineering Division, Konkan Bhavan, Navi Mumbai(New Mumbai)400614. </p>
+                    </li>
+                    <li>
+                        <p>Contact No: +91 22 2757 1537</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_img">
+            <div class="marquee-container">
+                <div class="marquee-1">
+                    <img src="./image/footer/p1.jpg" alt="f1">
+                    <img src="./image/footer/p2.png" alt="f2">
+                    <img src="./image/footer/p3.webp" alt="f3">
+                    <img src="./image/footer/p4.png" alt="f4">
+                    <img src="./image/footer/p5.jpg" alt="f5">
+                    <img src="./image/footer/p6.png" alt="f6">
+                    <img src="./image/footer/p7.png" alt="f7">
+                    <img src="./image/footer/p8.jpg" alt="f8">
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023,2024 Maharashtra Coastal |Harbour Engineering Division,Konkan Bhavan,Navi Mumbai | All rights
+            reserved.
+        </div>
+        <div class="w3">
+          
+                <a href="https://jigsaw.w3.org/css-validator">
+                    <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
+                        alt="Valid CSS!">
+                </a>
+                <a href="http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Faerialmappers.github.io%2FMH-CostalProject%2F&usermedium=all&vextwarning=&warning=1">
+                    <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
+                        alt="Valid CSS!">
+                        </a>
+            
+
+        </div>
+    </footer>
+
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <script>
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            const data = google.visualization.arrayToDataTable([
+                ['DISTRICT', 'Mhl'],
+                ['RATNAGIRI', 238],
+                ['RAIGAD', 121],
+                ['SINDHUDURG', 120],
+                ['PALGHAR', 110.5],
+                ['MUMBAI', 114],
+                ['THANE', 16.5]
+            ]);
+
+            const windowWidth = window.innerWidth;
+
+            let chartWidth = '100%';
+            let chartHeight = 550;
+
+            // Adjust size based on window width
+            if (windowWidth <= 200) {
+                chartWidth = windowWidth - 20; // Slight margin for padding
+                chartHeight = 100; // Height for very small screens
+            } else if (windowWidth <= 300) {
+                chartWidth = 300;
+                chartHeight = 200;
+            } else if (windowWidth <= 480) {
+                chartWidth = '100%';
+                chartHeight = 250;
+            } else if (windowWidth <= 767) {
+                chartWidth = '100%'; s
+                chartHeight = 300;
+            }
+
+            const options = {
+                title: 'COASTALINE LENGTH IN 720(KM)',
+                is3D: true,
+                width: chartWidth,
+                height: chartHeight
+            };
+
+            const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+            chart.draw(data, options);
+        }
+
+        // Redraw chart on window resize
+        window.onresize = drawChart;
+
+        // Initial chart draw
+        google.charts.setOnLoadCallback(drawChart);
+
+    </script>
+
+
+
+
+
+    <script >
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+
+    <script  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Java Script -->
+    <script src="./js/about.js"></script>
+    <script src="./js/liveDate.js"></script>
+    <script src="./js/zoomInOut.js"></script>
+    <!-- <script src="./js/demo.js"></script> -->
+
+</body>
+
+</html>
