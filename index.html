@@ -63,7 +63,7 @@
             </div>
         </div>
         <div class="dropdown">
-            <a href="sign_up.html" class="dropbtn">Project Data</a>
+            <a href="project_data.html" class="dropbtn">Project Data</a>
             <div class="dropdown-content">
                 <a href="sign_up.html">Village Wise Data</a>
                 <a href="taluka_data.html">Taluka Wise Data</a>
@@ -192,9 +192,11 @@
                             </div>
                         </div>
                         <div class="left_video">
-                            <video autoplay muted loop controls aria-label="Coastal video showcasing the Maharashtra coastline">
+                            <video autoplay muted loop controls aria-label="Coastal video showcasing the Maharashtra coastline" preload="metadata">
                                 <source src="./img/CoastalVideo.mp4" type="video/mp4">
-                                <p>Your browser does not support the video element. Here is a description: Coastal video showcasing the Maharashtra coastline.</p>
+                                <source src="./img/CoastalVideo.webm" type="video/webm">
+                                <track kind="captions" label="English" srclang="en" src="./img/CoastalVideoCaptions.vtt" default>
+                                <p>Your browser does not support the video element. Here is a description: This video showcases the scenic beauty of the Maharashtra coastline, including its beaches, cliffs, and marine life.</p>
                             </video>
                         </div>
                     </div>
