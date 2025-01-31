@@ -102,7 +102,7 @@
     text-align: center;
 }
 
-.head h1 {
+.head h2 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 2rem;
     color: #080808;
@@ -157,11 +157,13 @@
     /* background-color: aqua; */
     height: auto;
 }
-.mainbox h1{
+.mainbox h2{
   margin-left: 8%;
   margin-top: 20px;
   font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
   color: #030303;
+  align-items: center;
 }
 .mainbox ul{
     text-decoration:underline;
