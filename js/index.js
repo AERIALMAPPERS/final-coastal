@@ -160,39 +160,41 @@ newsData.forEach(news => {
 
 // govt logo link/////////////////////////////////////////////////////////////
 
-function digitalIndia() {
-    window.location.href = 'https://csc.gov.in/digitalIndia';
+// Function to handle navigation
+function navigateTo(url) {
+  window.location.href = url;
 }
-function Mudra() {
-    window.location.href = 'https://www.mudra.org.in/';
-}
-function swatchBharat() {
-    window.location.href = 'https://swachhbharatmission.gov.in/sbmcms/index.htm';
-}
-function skillIndia() {
-    window.location.href = 'https://www.skillindiadigital.gov.in/home';
-}
-function g2O() {
-    window.location.href = 'https://g20.mygov.in/';
-}
-function myGov() {
-    window.location.href = 'https://g20.mygov.in/';
-}
-function aadhar() {
-    window.location.href = 'https://uidai.gov.in/en/';
-}
-function govtOfIndia() {
-    window.location.href = 'https://www.india.gov.in/';
-}
-function lokpal() {
-    window.location.href = 'https://www.lokpal.gov.in/#:~:text=Acting%20Chairperson%2C%20Lokpal&text=The%20Act%20came%20into%20force,from%2028th%20May%2C2022.';
-}
-function worldFoodIndia() {
-    window.location.href = 'https://worldfoodindia.gov.in/';
-}
-function IndianPost() {
-    window.location.href = 'https://www.indiapost.gov.in/vas/Pages/IndiaPostHome.aspx';
-}
+
+// Mapping IDs to URLs
+const links = {
+  digitalIndia: "https://csc.gov.in/digitalIndia",
+  Mudra: "https://www.mudra.org.in/",
+  swatchBharat: "https://swachhbharatmission.gov.in/sbmcms/index.htm",
+  skillIndia: "https://www.skillindiadigital.gov.in/home",
+  g2O: "https://g20.mygov.in/",
+  myGov: "https://g20.mygov.in/",
+  aadhar: "https://uidai.gov.in/en/",
+  govtOfIndia: "https://www.india.gov.in/",
+  lokpal: "https://www.lokpal.gov.in/#:~:text=Acting%20Chairperson%2C%20Lokpal&text=The%20Act%20came%20into%20force,from%2028th%20May%2C2022.",
+  worldFoodIndia: "https://worldfoodindia.gov.in/",
+  IndianPost: "https://www.indiapost.gov.in/vas/Pages/IndiaPostHome.aspx",
+};
+
+// Attach event listeners to each image
+document.addEventListener("DOMContentLoaded", () => {
+  Object.keys(links).forEach(id => {
+      const element = document.getElementById(id);
+      if (element) {
+          element.addEventListener("click", () => navigateTo(links[id]));  // Mouse click
+          element.addEventListener("keydown", (event) => {  // Keyboard support
+              if (event.key === "Enter") {
+                  navigateTo(links[id]);
+              }
+          });
+          element.addEventListener("touchstart", () => navigateTo(links[id])); // Touch support
+      }
+  });
+});
 
 ///////////////////////////////////////Img end/////////////////////////////////
 
