@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ <p lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Explore the Maharashtra Coastline Project with interactive maps, reports, and project data.">
@@ -46,7 +46,7 @@
 
     <!-- Navbar -->
     <nav aria-label="Main navigation">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html" class="active" aria-label="Home page">Home</a>
         <a href="about.html">About</a>
         <div class="dropdown">
             <a href="service.html" class="dropbtn">Technology</a>
@@ -155,15 +155,15 @@
                 <div class="Region">
                     <h2>Region </h2>
                     <ul class="image-list">
-                        <li><a href="#" onclick="displayImage(event, './image/about/palghar.jpg')" aria-label="View Palghar region image">Palghar Region</a>
+                        <li><a href="#" onclick="displayImage(event, './image/about/palghar.jpg')" >Palghar Region</a>
                         </li>
-                        <li><a href="#" onclick="displayImage(event, './image/about/Raigadf.jpg')" aria-label="View Raigad region image">Raigad Region</a>
+                        <li><a href="#" onclick="displayImage(event, './image/about/Raigadf.jpg')" >Raigad Region</a>
                         </li>
-                        <li><a href="#" onclick="displayImage(event, './image/about/Mumbai.jpg')" aria-label="View Mumbai region image"> Mumbai Region</a>
+                        <li><a href="#" onclick="displayImage(event, './image/about/Mumbai.jpg')" > Mumbai Region</a>
                         </li>
-                        <li><a href="#" onclick="displayImage(event, './image/about/Thanef.jpg')" aria-label="View Thane region image"> Thane Region</a></li>
-                        <li><a href="#" onclick="displayImage(event, './image/about/Ratnagiriff.jpg')" aria-label="View Ratnagiri region image">Ratnagiri Region</a></li>
-                        <li><a href="#" onclick="displayImage(event, './image/about/Sindhudurg.jpg')" aria-label="View Sindhudurg region image">Sindhudurg Region</a></li>
+                        <li><a href="#" onclick="displayImage(event, './image/about/Thanef.jpg')" > Thane Region</a></li>
+                        <li><a href="#" onclick="displayImage(event, './image/about/Ratnagiriff.jpg')" >Ratnagiri Region</a></li>
+                        <li><a href="#" onclick="displayImage(event, './image/about/Sindhudurg.jpg')">Sindhudurg Region</a></li>
                     </ul>
                 </div>
                 
@@ -195,8 +195,11 @@
                             <video autoplay muted loop controls aria-label="Coastal video showcasing the Maharashtra coastline" preload="metadata">
                                 <source src="./img/CoastalVideo.mp4" type="video/mp4">
                                 <source src="./img/CoastalVideo.webm" type="video/webm">
+                                <!-- Captions for the video -->
                                 <track kind="captions" label="English" srclang="en" src="./img/CoastalVideoCaptions.vtt" default>
+                                <!-- Video description for users with visual impairments -->
                                 <track kind="descriptions" label="English Description" srclang="en" src="./img/CoastalVideoDescription.vtt">
+                                <!-- Fallback content for browsers that do not support the video element -->
                                 <p>Your browser does not support the video element. Here is a description: This video showcases the scenic beauty of the Maharashtra coastline, including its beaches, cliffs, and marine life. <a href="./transcript.txt">Download the full transcript</a>.</p>
                             </video>
                         </div>

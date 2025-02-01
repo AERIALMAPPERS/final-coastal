@@ -11,13 +11,13 @@
     <form id="loginForm">
         <h2>Login</h2>
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
+        <input type="text" id="username" name="username" required aria-label="Enter your username"><br><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+        <input type="password" id="password" name="password" required aria-label="Enter your password"><br><br>
 
-        <button>Login</button><br><br>
-        <button onclick="window.location.href='/sign_up.html'">Don't have an account? Sign Up</button>
+        <button type="submit" aria-label="Submit login form">Login</button><br><br>
+        <button type="button" onclick="window.location.href='/sign_up.html'">Don't have an account? Sign Up</button>
     </form>
 
     <script src="login.js"></script>
