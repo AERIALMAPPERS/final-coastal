@@ -56,6 +56,9 @@ body {
 #goog-gt-thumbDownButton span {
     display: none !important;
 }
+.img[alt="Google Translate"] {
+  display: none !important;
+}
 header {
   background-color: #ffffff;
   color: #fdfdfd;
