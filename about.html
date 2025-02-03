@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore the Maharashtra Coastline Project with interactive maps, reports, and project data.">
     <title>Coastline Of Maharashtra</title>
     <link rel="icon" type="image/png" href="./image/logo/favicon.png">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -15,37 +17,38 @@
 </head>
 
 <body>
-
     <div id="zoomButtons">
         <div class="content">
-            <button aria-label="Decrease text size" onclick="zoomOut()">A-</button>
-            <button aria-label="Reset text size" onclick="resetZoom()">A</button>
-            <button aria-label="Increase text size" onclick="zoomIn()">A+</button>
+            <button onclick="zoomOut()">A-</button>
+            <button onclick="resetZoom()">A</button>
+            <button onclick="zoomIn()">A+</button>
             |
             <span id="liveDate"></span>
         </div>
-        <div id="google_translate_element" aria-label="Language Translate Widget" role="region" aria-live="polite">
+        <div id="google_translate_element" role="region">
         </div>
+
     </div>
 
 
     <!-- HEADING -->
     <header>
         <div class="header">
-            <img src="./image/logo/logo1.jpeg" alt="gov logo">
-            <h1>Maharashtra <br>Coastline</h1>
-            <img src="./image/logo/coastl.png" alt="coastal img" id="coastal-logo">
+            <img src="./image/logo/logo1.jpeg" alt="Government of India logo">
+            <h1>Maharashtra Coastline</h1>
+            <img src="./image/logo/coastl.png" alt="Maharashtra coastline project logo" id="coastal-logo">
             <div id="govImg">
-                <img src="./image/index/75th.jpg" alt="gov logo">
-                <img src="./image/index/g20.jpg" alt="gov logo">
-                <img src="./image/index/mygov.png" alt="gov logo">
-                <img src="./image/index/p4.png" alt="gov logo">
-                <img src="./image/index/p8.png" alt="gov logo">
+                <img src="./image/index/75th.jpg" alt="75th Independence anniversary logo">
+                <img src="./image/index/g20.jpg" alt="G20 India summit logo">
+                <img src="./image/index/mygov.png" alt="MyGov India official logo">
+                <img src="./image/index/skillindia.png" alt="Skill india portal logo">
+                <img src="./image/index/bhartsarkar.png" alt="bharat sarkar portal logo">
             </div>
             <button class="login-button" onclick="window.location.href='/login.html'">Login</button>
             <button class="signup-button" onclick="window.location.href='/sign_up.html'">Sign_Up</button>
         </div>
     </header>
+
 
     <!-- Navbar -->
     <nav>
@@ -220,84 +223,74 @@
         <div class="govt-img">
             <br>
             <div class="img-div">
-                <img src="./image/Govt-Img/p1.jpg" alt=" Gov Imges of digital india" onclick="digitalIndia()"
-                    aria-label="Go to Digital India page">
-                <img src="./image/Govt-Img/p2.png" alt=" gov img of mudra" onclick="Mudra()"
-                    aria-label="Go to mmudra page">
-                <img src="./image/Govt-Img/p3.webp" alt="gov img of swatch bharat" onclick="swatchBharat()"
-                    aria-label="Go to swatchBharat page">
-                <img src="./image/Govt-Img/p4.png" alt="Gov img of Skill india" onclick="skillIndia()"
-                    aria-label="Go to skillIndia page">
-                <img src="./image/Govt-Img/p5.jpg" alt="Gov img of g20" onclick="g2O()" aria-label="Go to g2O page">
-                <img src="./image/Govt-Img/p6.jpg" alt="mygoverment img" onclick="myGov()"
-                    aria-label="Go to myGov page">
-                <img src="./image/Govt-Img/p7.png" alt="gov adhar img" onclick="aadhar()"
-                    aria-label="Go to aadhar page">
-                <img src="./image/Govt-Img/p8.png" alt="gov of indiaa img" onclick="govtOfIndia()"
-                    aria-label="Go to govtOfIndia page">
-                <img src="./image/Govt-Img/p9.jpg" alt="gov of lokpal img" onclick="lokpal()"
-                    aria-label="Go to lokpal page">
-                <img src="./image/Govt-Img/p10.png" alt="gov of worldFoodIndia img" onclick="worldFoodIndia()"
-                    aria-label="Go to worldFoodIndia page">
-                <img src="./image/Govt-Img/p11.png" alt="indian posr img" onclick="IndianPost()"
-                    aria-label="Go to IndianPost page">
-                <img src="./image/Govt-Img/p12.png" alt="my gov img" onclick="myGov()" aria-label="Go to myGov page">
+                <img src="./image/Govt-Img/p1.jpg" alt=" Digital India government logo">
+                <img src="./image/Govt-Img/p2.png" alt="Mudra Yojana government logo">
+                <img src="./image/Govt-Img/p3.webp" alt="Swachh Bharat Abhiyan logo">
+                <img src="./image/Govt-Img/p4.png" alt="Skill India government logo">
+                <img src="./image/Govt-Img/p5.jpg" alt="G20 India summit logo">
+                <img src="./image/Govt-Img/p6.jpg" alt="MyGov India logo">
+                <img src="./image/Govt-Img/p7.png" alt="Aadhaar India government logo">
+                <img src="./image/Govt-Img/p8.png" alt="Government of India emblem">
+                <img src="./image/Govt-Img/p9.jpg" alt="Lokpal India logo">
+                <img src="./image/Govt-Img/p10.png" alt="World Food India logo">
+                <img src="./image/Govt-Img/p11.png" alt="India Post government logo">
+                <img src="./image/Govt-Img/p12.png" alt="MyGov India government portal">
             </div>
         </div>
         <br>
-    </main>
 
-    <!-- ////////////////////////////////////////////// -->
+    </main>
 
     <footer>
         <div class="footer-container">
+            <!-- Services Section -->
             <div class="service1">
                 <h3><a href="./service.html">Technology</a></h3>
                 <ul>
-                    <li><a href="./service.html">Lidar Technology</a></li>
-                    <li><a href="./service.html">Bathymetry Technology</a></li>
+                    <li>Lidar Technology</li>
+                    <li>Bathymetry Technology</li>
 
                 </ul>
             </div>
 
+            <!-- Features Section -->
             <div class="features">
                 <h3><a href="./features.html">Features</a></h3>
                 <ul>
                     <li>Advanced Equipment</li>
                     <li>Team of Expert</li>
-                    <li>99% accuracy</li>
-                    <li>5x faster Dilivary</li>
-                    <li>one to one Support</li>
+                    <li>99% Accuracy</li>
+                    <li>5x Faster Delivery</li>
+                    <li>One to One Support</li>
                 </ul>
             </div>
 
+            <!-- Policies Section -->
             <div class="policies">
-                <h3>Peoples and Policies</h3>
+                <h3>People and Policies</h3>
                 <ul>
-                    <li><a href="./disclaimer.html">Disclaimer</a></li>
-                    <!-- <li>Disclaimer</li> -->
-                    <!-- <li>Who is Who</li> -->
+                    <li><a href="./disclaimer.html">Disclaimer </a></li>
                     <li><a href="./policy.html">Privacy Policy</a></li>
-                    <!-- <li>Privacy Policy</li> -->
                     <li><a href="https://igod.gov.in/">GOI Web Directory</a></li>
-                    <!-- <li>GOI Web Directory</li> -->
                 </ul>
             </div>
 
+            <!-- Planning Section -->
             <div class="planning">
                 <h3><a href="./planning.html">Planning</a></h3>
                 <ul>
-                    <li><a href="#">Scheduling</a></li>
-                    <li><a href="#">Planning</a></li>
+                    <li>Scheduling</li>
+                    <li>Planning</li>
                 </ul>
             </div>
 
+            <!-- Contact Details Section -->
             <div class="contact-details">
-
-                <h3><a href="#/contact.html">Contact Details</a></h3>
+                <h3><a href="contact.html">Contact Details</a></h3>
                 <ul>
                     <li>
-                        <p>Harbour Engineer, Harbour Engineering Division, Konkan Bhavan, Navi Mumbai(New Mumbai)400614. </p>
+                        <p>Harbour Engineer, Harbour Engineering Division, Konkan Bhavan, Navi Mumbai (New Mumbai)
+                            400614.</p>
                     </li>
                     <li>
                         <p>Contact No: +91 22 2757 1537</p>
@@ -305,39 +298,44 @@
                 </ul>
             </div>
         </div>
+
+        <!-- Footer Images Section -->
         <div class="footer_img">
-            <div class="marquee-container">
+            <div class="marquee-container" role="region">
                 <div class="marquee-1">
-                    <img src="./image/footer/p1.jpg" alt="f1">
-                    <img src="./image/footer/p2.png" alt="f2">
-                    <img src="./image/footer/p3.webp" alt="f3">
-                    <img src="./image/footer/p4.png" alt="f4">
-                    <img src="./image/footer/p5.jpg" alt="f5">
-                    <img src="./image/footer/p6.png" alt="f6">
-                    <img src="./image/footer/p7.png" alt="f7">
-                    <img src="./image/footer/p8.jpg" alt="f8">
+                    <img src="./image/footer/footerdigitalindia.jpg" alt="Digital India initiative logo in footer">
+                    <img src="./image/footer/footermurda.png" alt="Mudra Yojana logo in footer">
+                    <img src="./image/footer/footerswachbhart.webp" alt="Swachh Bharat Abhiyan logo in footer">
+                    <img src="./image/footer/footerskillindia.png" alt="Skill India initiative logo in footer">
+                    <img src="./image/footer/footerg20.jpg" alt="G20 India Summit logo in footer">
+                    <img src="./image/footer/footerindianpost.png" alt="India Post logo in footer">
+                    <img src="./image/footer/footeraashar.png" alt="Aadhaar India logo in footer">
+                    <img src="./image/footer/footersatyamevjayte.jpg" alt="Satyamev Jayate emblem in footer">
                 </div>
             </div>
         </div>
+
+        <!-- Copyright Section -->
         <div class="copyright">
-            &copy; 2023,2024 Maharashtra Coastal |Harbour Engineering Division,Konkan Bhavan,Navi Mumbai | All rights
+            &copy; 2023 Maharashtra Coastal | Harbour Engineering Division, Konkan Bhavan, Navi Mumbai | All rights
             reserved.
         </div>
-        <div class="w3">
-          
-                <a href="https://jigsaw.w3.org/css-validator">
-                    <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
-                        alt="Valid CSS!">
-                </a>
-                <a href="http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Faerialmappers.github.io%2FMH-CostalProject%2F&usermedium=all&vextwarning=&warning=1">
-                    <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
-                        alt="Valid CSS!">
-                        </a>
-            
 
+        <!-- W3C CSS Validator Section -->
+        <div class="w3">
+            <p>
+                <a href="https://validator.w3.org/check?uri=https://aerialmappers.github.io/MH-CostalProject/"
+                    target="_blank">
+                    <img src="https://www.w3.org/Icons/valid-xhtml10" alt="XHTML 1.0 Validation Icon">
+                </a>
+                <a href="http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Faerialmappers.github.io%2FMH-CostalProject%2F&usermedium=all&vextwarning=&warning=1"
+                    target="_blank">
+                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="W3c Css Validation icon" height="31"
+                        width="88">
+                </a>
+            </p>
         </div>
     </footer>
-
 
     <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -394,11 +392,6 @@
         google.charts.setOnLoadCallback(drawChart);
 
     </script>
-
-
-
-
-
     <script >
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
@@ -408,10 +401,11 @@
     <script  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <!-- Java Script -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/zoomInOut.js"></script>
     <script src="./js/about.js"></script>
     <script src="./js/liveDate.js"></script>
-    <script src="./js/zoomInOut.js"></script>
-    <!-- <script src="./js/demo.js"></script> -->
+    <script src="./js/translate.js"></script>
 
 </body>
 
