@@ -165,7 +165,7 @@
   color: #030303;
   align-items: center;
 }
-.mainbox ul{
+.mainbox ol{
     text-decoration:underline;
     color: #000000;
     margin-left: 10%;
