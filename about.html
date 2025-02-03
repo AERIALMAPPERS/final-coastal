@@ -211,10 +211,10 @@
                 </div>
                 <!-- Navigation dots -->
                 <div class="dots-container">
-                    <span class="dot" tabindex="0"  onclick="currentSlide(1)" onkeydown="handleDotKeydown(event, 1)"></span>
-                    <span class="dot"  tabindex="0"  onclick="currentSlide(2)" onkeydown="handleDotKeydown(event, 2)"></span>
-                    <span class="dot"  tabindex="0" onclick="currentSlide(3)" onkeydown="handleDotKeydown(event, 3)"></span>
-                </div>
+                    <button class="dot active" tabindex="0" onclick="currentSlide(1)" onkeydown="handleDotKeydown(event, 1)" aria-label="Slide 1"></button>
+                    <button class="dot" tabindex="0" onclick="currentSlide(2)" onkeydown="handleDotKeydown(event, 2)" aria-label="Slide 2"></button>
+                    <button class="dot" tabindex="0" onclick="currentSlide(3)" onkeydown="handleDotKeydown(event, 3)" aria-label="Slide 3"></button>
+                  </div>
             </div>
         </div>
         <br>
