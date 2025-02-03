@@ -51,7 +51,11 @@ body {
 #google_translate_element [aria-label] {
   display: none !important;
 }
-
+.goog-te-combo + span, 
+#goog-gt-thumbUpButton span, 
+#goog-gt-thumbDownButton span {
+    display: none !important;
+}
 header {
   background-color: #ffffff;
   color: #fdfdfd;

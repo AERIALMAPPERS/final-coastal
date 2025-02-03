@@ -204,4 +204,7 @@ document.getElementById("hamburger-btn").addEventListener("click", function() {
   navLinks.classList.toggle("show");
 });
 
-   
+   /////////////////////////////////////////////////////////
+   document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("span[aria-label]").forEach(el => el.remove());
+});
