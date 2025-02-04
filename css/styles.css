@@ -63,13 +63,7 @@ body {
     position: absolute !important;
     overflow: hidden !important;
 }
-#goog-gt-votingForm,
-#goog-gt-votingHiddenPane,
-#goog-gt-thumbUpButton,
-#goog-gt-thumbDownButton {
-    display: none !important;
-    visibility: hidden !important;
-}
+
 
 header {
   background-color: #ffffff;

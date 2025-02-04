@@ -15,11 +15,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ////////////////////
-document.addEventListener("DOMContentLoaded", function () {
-  // Add ARIA labels dynamically
-  let googleTranslateDropdown = document.querySelector(".goog-te-combo");
-  if (googleTranslateDropdown) {
-      googleTranslateDropdown.setAttribute("aria-label", "Select Language");
-  }
-});
+
 /////////////
