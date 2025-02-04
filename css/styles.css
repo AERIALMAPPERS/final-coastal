@@ -48,23 +48,27 @@ body {
  #google_translate_element {
   margin-right: 20px;
 }
-
-#goog-gt-votingForm, 
+#goog-gt-votingHiddenPane,
+#goog-gt-votingForm,
+#votingFrame,
+#goog-gt-votingInputSrcLang,
+#goog-gt-votingInputTrgLang,
+#goog-gt-votingInputSrcText,
+#goog-gt-votingInputTrgText,
+#goog-gt-votingInputVote {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: absolute !important;
+    overflow: hidden !important;
+}
+/* #goog-gt-votingForm, 
 #goog-gt-votingHiddenPane {
     display: none !important;
     visibility: hidden !important;
-}
-/* #google_translate_element [aria-label] {
-  display: none !important;
-}
-.goog-te-combo + span, 
-#goog-gt-thumbUpButton span, 
-#goog-gt-thumbDownButton span {
-    display: none !important;
-}
-.img[alt="Google Translate"] {
-  display: none !important;
-}  */
+} */
+
 header {
   background-color: #ffffff;
   color: #fdfdfd;
