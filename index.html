@@ -197,34 +197,34 @@
                             </div>
                         </div>
                         <div class="left_video">
-                            <video 
-                                aria-label="Maharashtra Coastline Overview Video" 
-                                aria-describedby="video-description"
-                                autoplay muted loop controls preload="metadata">
+                            <!-- Accessible video player -->
+                            <video id="coastal-video" controls preload="metadata">
                                 
+                                <!-- Video sources -->
                                 <source src="./img/CoastalVideo.mp4" type="video/mp4">
                                 <source src="./img/CoastalVideo.webm" type="video/webm">
-                                
-                                <!-- Captions for users who are deaf or hard of hearing -->
+                        
+                                <!-- Captions for hearing-impaired users -->
                                 <track kind="captions" label="English" srclang="en" src="./img/CoastalVideoCaptions.vtt" default>
                         
-                                <!-- Audio description for visually impaired users -->
+                                <!-- Audio descriptions for visually impaired users -->
                                 <track kind="descriptions" label="English Description" srclang="en" src="./img/CoastalVideoDescription.vtt">
                         
-                                <!-- Fallback content for browsers that do not support the video element -->
-                                <p id="video-description">
+                                <!-- Fallback content -->
+                                <p>
                                     Your browser does not support the video element. This video showcases the scenic beauty of the 
                                     Maharashtra coastline, including its beaches, cliffs, and marine life. 
                                     <a href="./transcript.txt">Download the full transcript</a>.
                                 </p>
                             </video>
                         
-                            <!-- Keyboard Accessible Play/Pause Buttons -->
+                            <!-- Play/Pause buttons for keyboard accessibility -->
                             <div>
-                                <button onclick="document.querySelector('video').play()">Play</button>
-                                <button onclick="document.querySelector('video').pause()">Pause</button>
+                                <button onclick="document.getElementById('coastal-video').play()">Play</button>
+                                <button onclick="document.getElementById('coastal-video').pause()">Pause</button>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="map_container" id="right_container">
 
