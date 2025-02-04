@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 3000); // Delay to ensure elements are injected before removal
 });
 
-
-
+////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+  // Add ARIA labels dynamically
+  let googleTranslateDropdown = document.querySelector(".goog-te-combo");
+  if (googleTranslateDropdown) {
+      googleTranslateDropdown.setAttribute("aria-label", "Select Language");
+  }
+});
 /////////////
