@@ -45,10 +45,16 @@ body {
   background-color: #fff;
 }
 
-#google_translate_element {
+ #google_translate_element {
   margin-right: 20px;
 }
-#google_translate_element [aria-label] {
+
+#goog-gt-votingForm, 
+#goog-gt-votingHiddenPane {
+    display: none !important;
+    visibility: hidden !important;
+}
+/* #google_translate_element [aria-label] {
   display: none !important;
 }
 .goog-te-combo + span, 
@@ -58,7 +64,7 @@ body {
 }
 .img[alt="Google Translate"] {
   display: none !important;
-}
+}  */
 header {
   background-color: #ffffff;
   color: #fdfdfd;
