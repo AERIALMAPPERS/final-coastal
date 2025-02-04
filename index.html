@@ -32,7 +32,7 @@
     <!-- HEADING -->
     <header>
         <div class="header">
-            <img src="./image/logo/logo1.jpeg" alt="Government of India logo">
+            <img src="./image/logo/logo1.jpeg" alt="" aria-hidden="true">
             <h1>Maharashtra Coastline</h1>
             <img src="./image/logo/coastl.png" alt="Maharashtra coastline project logo" id="coastal-logo">
             <div id="govImg">
@@ -197,31 +197,26 @@
                             </div>
                         </div>
                         <div class="left_video">
-                            <!-- Accessible video player -->
                             <video id="coastal-video" controls preload="metadata">
-                                
-                                <!-- Video sources -->
                                 <source src="./img/CoastalVideo.mp4" type="video/mp4">
                                 <source src="./img/CoastalVideo.webm" type="video/webm">
                         
-                                <!-- Captions for hearing-impaired users -->
+                                <!-- Captions -->
                                 <track kind="captions" label="English" srclang="en" src="./img/CoastalVideoCaptions.vtt" default>
                         
-                                <!-- Audio descriptions for visually impaired users -->
+                                <!-- Audio Descriptions -->
                                 <track kind="descriptions" label="English Description" srclang="en" src="./img/CoastalVideoDescription.vtt">
                         
-                                <!-- Fallback content -->
-                                <p>
-                                    Your browser does not support the video element. This video showcases the scenic beauty of the 
-                                    Maharashtra coastline, including its beaches, cliffs, and marine life. 
-                                    <a href="./transcript.txt">Download the full transcript</a>.
-                                </p>
+                                <!-- Fallback Text -->
+                                <p>Your browser does not support the video element. 
+                                <a href="./transcript.txt">Download the full transcript</a>.</p>
                             </video>
                         
-                            <!-- Play/Pause buttons for keyboard accessibility -->
-                            <div>
-                                <button onclick="document.getElementById('coastal-video').play()">Play</button>
-                                <button onclick="document.getElementById('coastal-video').pause()">Pause</button>
+                            <!-- Transcript for Compliance -->
+                            <div class="video_transcript">
+                                <h3>Video Transcript</h3>
+                                <p>This video showcases the scenic beauty of the Maharashtra coastline, including its beaches, cliffs, and marine life.</p>
+                                <a href="./transcript.txt">Download the full transcript</a>
                             </div>
                         </div>
                         
