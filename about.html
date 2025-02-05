@@ -208,25 +208,52 @@
                 </div>
                 <!-- Navigation dots -->
                 <div class="dots-container">
-                    <span class="dot" tabindex="0"  onclick="currentSlide(1)" onkeydown="handleDotKeydown(event, 1)"></span>
-                    <span class="dot"  tabindex="0"  onclick="currentSlide(2)" onkeydown="handleDotKeydown(event, 2)"></span>
-                    <span class="dot"  tabindex="0" onclick="currentSlide(3)" onkeydown="handleDotKeydown(event, 3)"></span>
+                    <span class="dot" role="button" aria-label="Go to slide 1" tabindex="0" onclick="currentSlide(1)" onkeydown="handleDotKeydown(event, 1)"></span>
+                    <span class="dot" role="button" aria-label="Go to slide 2" tabindex="0" onclick="currentSlide(2)" onkeydown="handleDotKeydown(event, 2)"></span>
+                    <span class="dot" role="button" aria-label="Go to slide 3" tabindex="0" onclick="currentSlide(3)" onkeydown="handleDotKeydown(event, 3)"></span>
                 </div>
             </div>
         </div>
-        <br>
-        <br>
+        
         <script>
-            // Handle keyboard interactions (Enter or Space)
-            function handleDotKeydown(event, slideIndex) {
-    if (event.key === "Enter" || event.key === " ") {
-        currentSlide(slideIndex);
-    } else if (event.key === "ArrowRight") {
-        currentSlide(slideIndex + 1);
-    } else if (event.key === "ArrowLeft") {
-        currentSlide(slideIndex - 1);
-    }
-}
+            let slideIndex = 1;
+            showSlides(slideIndex);
+        
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+        
+            function showSlides(n) {
+                let slides = document.querySelectorAll(".mySlides");
+                let dots = document.querySelectorAll(".dot");
+        
+                if (n > slides.length) slideIndex = 1; // Loop back to first slide
+                if (n < 1) slideIndex = slides.length; // Loop to last slide
+        
+                slides.forEach(slide => slide.style.display = "none"); // Hide all slides
+                dots.forEach(dot => dot.classList.remove("active")); // Remove active state
+        
+                slides[slideIndex - 1].style.display = "block"; // Show current slide
+                dots[slideIndex - 1].classList.add("active"); // Highlight active dot
+            }
+        
+            function handleDotKeydown(event, n) {
+                if (event.key === "Enter" || event.key === " ") {
+                    currentSlide(n);
+                } else if (event.key === "ArrowRight") {
+                    if (n < document.querySelectorAll(".dot").length) {
+                        currentSlide(n + 1);
+                    } else {
+                        currentSlide(1); // Loop back to first slide
+                    }
+                } else if (event.key === "ArrowLeft") {
+                    if (n > 1) {
+                        currentSlide(n - 1);
+                    } else {
+                        currentSlide(document.querySelectorAll(".dot").length); // Loop to last slide
+                    }
+                }
+            }
         </script>
         
         <!-- ////////////////////////////////////////////////////////////////////////// -->

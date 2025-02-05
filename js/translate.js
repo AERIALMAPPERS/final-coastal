@@ -14,6 +14,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 3000); // Delay to ensure elements are injected before removal
 });
 
-////////////////////
-
-/////////////
