@@ -29,43 +29,35 @@ function toggleReadMore1() {
 
 
 // slide show
-let slideIndex = 0;
-showSlides();
+let slideIndex = 1;
+showSlides(slideIndex);
 
-function showSlides() {
-    const slides = document.getElementsByClassName("mySlides");
-    const dots = document.getElementsByClassName("dot");
-
-    // Hide all slides
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    // Remove active class from dots
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    // Increment slideIndex and loop back if necessary
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-
-    // Display the current slide and activate corresponding dot
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-
-    // Change slide every 3 seconds
-    setTimeout(showSlides, 3000);
+function plusSlides(n) {
+  showSlides((slideIndex += n));
 }
 
-function currentSlide(index) {
-    slideIndex = index - 1; // Adjust for zero-based index
-    showSlides();
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex - 1].style.display = "block";
 }
-
-
+ // Automatically change slides every 1500 milliseconds (1.5 seconds)
+ setInterval(function () {
+    plusSlides(1);
+  }, 3000);
 ///////////////////
 
 function displayImageAndHighlight(imageUrl, area) {
