@@ -381,6 +381,16 @@
 
         // Initial chart draw
         google.charts.setOnLoadCallback(drawChart);
+        // After chart is drawn, remove or modify ARIA labels
+    const chartDiv = document.getElementById('myChart');
+    const ariaElements = chartDiv.querySelectorAll('[aria-hidden="true"]');
+    
+    // Hide or modify ARIA labels
+    ariaElements.forEach(function(ariaElement) {
+        ariaElement.style.display = 'none'; // Hides the aria-hidden elements
+        // Or, you can modify the content as per your requirements
+        // ariaElement.setAttribute('aria-hidden', 'false');
+    });
 
     </script>
     <script >

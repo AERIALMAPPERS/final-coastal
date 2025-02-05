@@ -31,6 +31,11 @@
     margin: 0;
     overflow-wrap: break-word; /* Prevent layout shifts from long words */
 }
+/* CSS to hide or adjust the aria-hidden elements */
+#myChart div[aria-hidden="true"] {
+    display: none; /* Hides the ARIA hidden divs */
+}
+
 
 /* Medium Screens (Tablets, 768px - 1024px) */
 @media (max-width: 1024px) {
