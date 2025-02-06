@@ -33,3 +33,5 @@ document.addEventListener("DOMContentLoaded", loadImages);
         gallery.appendChild(img);
       });
     }
+
+    ///////////////////////////////////////////
