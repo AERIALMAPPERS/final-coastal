@@ -121,8 +121,10 @@ function displayImage(event, imageUrl) {
 }
 
 
-
-
+//////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("span[aria-label]").forEach(el => el.remove());
+});
 
 
 
