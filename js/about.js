@@ -1,34 +1,63 @@
-// read more lidar
-function toggleReadMore() {
-  var additionalContent = document.getElementById('additional-content');
-  var readMoreButton = document.querySelector('button');
+google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.setOnLoadCallback(drawChart);
 
-  if (additionalContent.style.display === 'none') {
-      additionalContent.style.display = 'block';
-      readMoreButton.textContent = 'Read Less';
-  } else {
-      additionalContent.style.display = 'none';
-      readMoreButton.textContent = 'Read More';
-  }
+function drawChart() {
+    const data = google.visualization.arrayToDataTable([
+        ['DISTRICT', 'Mhl'],
+        ['RATNAGIRI', 238],
+        ['RAIGAD', 121],
+        ['SINDHUDURG', 120],
+        ['PALGHAR', 110.5],
+        ['MUMBAI', 114],
+        ['THANE', 16.5]
+    ]);
+
+    const windowWidth = window.innerWidth;
+
+    let chartWidth = '100%';
+    let chartHeight = 550;
+
+    // Adjust size based on window width
+    if (windowWidth <= 200) {
+        chartWidth = windowWidth - 20; // Slight margin for padding
+        chartHeight = 100; // Height for very small screens
+    } else if (windowWidth <= 300) {
+        chartWidth = 300;
+        chartHeight = 200;
+    } else if (windowWidth <= 480) {
+        chartWidth = '100%';
+        chartHeight = 250;
+    } else if (windowWidth <= 767) {
+        chartWidth = '100%'; s
+        chartHeight = 300;
+    }
+
+    const options = {
+        title: 'COASTALINE LENGTH IN 720(KM)',
+        is3D: true,
+        width: chartWidth,
+        height: chartHeight
+    };
+
+    const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+    chart.draw(data, options);
 }
 
-// read more bathematry
-function toggleReadMore1() {
-  var additionalContent = document.getElementById('additional-content1');
-  var readMoreButton = document.querySelector('button');
+// Redraw chart on window resize
+window.onresize = drawChart;
 
-  if (additionalContent.style.display === 'none') {
-      additionalContent.style.display = 'block';
-      readMoreButton.textContent = 'Read Less';
-  } else {
-      additionalContent.style.display = 'none';
-      readMoreButton.textContent = 'Read More';
-  }
-}
+// Initial chart draw
+google.charts.setOnLoadCallback(drawChart);
+// After chart is drawn, remove or modify ARIA labels
+const chartDiv = document.getElementById('myChart');
+const ariaElements = chartDiv.querySelectorAll('[aria-hidden="true"]');
 
+// Hide or modify ARIA labels
+ariaElements.forEach(function(ariaElement) {
+ariaElement.style.display = 'none'; // Hides the aria-hidden elements
+});
 
-
-// slide show
+///////////////////// slide show/////////////////////////////
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -60,67 +89,6 @@ function showSlides(n) {
   }, 3000);
 ///////////////////
 
-function displayImageAndHighlight(imageUrl, area) {
-  displayImage(imageUrl);
-  highlightArea(area);
-}
-
-function displayImage(imageUrl) {
-  var displayedImage = document.getElementById("displayedImage");
-  displayedImage.src = imageUrl;
-  displayedImage.style.display = "block";
-}
-
-function highlightArea(area) {
-  var displayedImage = document.getElementById("displayedImage");
-  var imageWidth = displayedImage.width;
-  var imageHeight = displayedImage.height;
-
-  var canvas = document.createElement("canvas");
-  canvas.width = imageWidth;
-  canvas.height = imageHeight;
-  var ctx = canvas.getContext("2d");
-
-  displayedImage.onload = function() {
-      ctx.drawImage(displayedImage, 0, 0, imageWidth, imageHeight);
-      if (area === 'district1') {
-          // Define coordinates for district 1 boundary
-          // Example coordinates: x1, y1, x2, y2, ...
-          var coords = [100, 100, 200, 200, 300, 150]; // Update with actual coordinates
-          drawPolygon(ctx, coords);
-      } else if (area === 'district2') {
-          // Define coordinates for district 2 boundary
-          var coords = [150, 250, 250, 350, 200, 400]; // Update with actual coordinates
-          drawPolygon(ctx, coords);
-      }
-      // Add more conditions for other districts if needed
-      displayedImage.src = canvas.toDataURL();
-  };
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("regionButton").addEventListener("click", function() {
-      displayRegions();
-  });
-});
-
-/////////////
-
-function displayImage(imageUrl) {
-  var displayedImage = document.getElementById("displayedImage");
-  displayedImage.src = imageUrl;
-}
-
-
-
-function displayImage(event, imageUrl) {
-  event.preventDefault(); // Prevent the default action of anchor tag (page refresh)
-
-  var displayedImage = document.getElementById("displayedImage");
-  displayedImage.src = imageUrl;
-}
-
-/////////////////////////////////
 
 // JavaScript for Hamburger Menu
 document.getElementById("hamburger-btn").addEventListener("click", function() {
