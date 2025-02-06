@@ -90,12 +90,6 @@ function showSlides(n) {
 ///////////////////
 
 
-// JavaScript for Hamburger Menu
-document.getElementById("hamburger-btn").addEventListener("click", function() {
-  const navLinks = document.getElementById("navbar-links");
-  navLinks.classList.toggle("show");
-});
-
 //////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("span[aria-label]").forEach(el => el.remove());
