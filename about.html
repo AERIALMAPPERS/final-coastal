@@ -6,9 +6,6 @@
         content="Explore the Maharashtra Coastline Project with interactive maps, reports, and project data.">
     <title>Coastline Of Maharashtra</title>
     <link rel="icon" type="image/png" href="./image/logo/favicon.png">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/pie.css">
@@ -24,6 +21,45 @@
             <span id="liveDate"></span>
         </div>
         <div id="google_translate_element" role="region"></div>
+<script>
+    function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,hi,mr',  // Add languages you want to include
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    let votingForm = document.getElementById("goog-gt-votingForm");
+    let votingPane = document.getElementById("goog-gt-votingHiddenPane");
+
+    // Check if the elements exist and remove them
+    if (votingForm) {
+      votingForm.remove();
+    }
+    if (votingPane) {
+      votingPane.remove();
+    }
+
+    // Add ARIA labels if the dynamic form elements exist
+    let translateDropdown = document.querySelector('.goog-te-combo');
+    if (translateDropdown) {
+      translateDropdown.setAttribute('aria-label', 'Select your language');
+    }
+
+    let translateButton = document.querySelector('.goog-te-button');
+    if (translateButton) {
+      translateButton.setAttribute('aria-label', 'Translate page');
+    }
+
+  }, 3000); // Delay to ensure elements are injected before removal
+});
+
+</script>
+
+
     </div>
     <!-- HEADING -->
     <header>
@@ -324,7 +360,7 @@
             </p>
         </div>
     </footer>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
     <!-- Java Script -->
     <script src="./js/zoomInOut.js"></script>
     <script src="./js/about.js"></script>
@@ -333,8 +369,5 @@
    
     <script  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
 </body>
-
 </html>
