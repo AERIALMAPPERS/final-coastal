@@ -45,6 +45,19 @@ h2 {
     object-fit: cover;
     border-radius: 5px;
 }
+
+#goog-gt-votingInputSrcLang,
+#goog-gt-votingInputTrgLang,
+#goog-gt-votingInputSrcText,
+#goog-gt-votingInputTrgText,
+#goog-gt-votingInputVote {
+    display: none;
+}
+
+
+
+
+
 #google_translate_element {
     margin-right: 20px;
   }
