@@ -28,7 +28,7 @@ function drawChart() {
         chartWidth = '100%';
         chartHeight = 250;
     } else if (windowWidth <= 767) {
-        chartWidth = '100%'; s
+        chartWidth = '100%'; 
         chartHeight = 300;
     }
 
