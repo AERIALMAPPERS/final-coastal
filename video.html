@@ -263,24 +263,7 @@
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-            let videos = document.querySelectorAll("video");
-            let audios = document.querySelectorAll("audio");
 
-            videos.forEach(video => {
-                if (!video.querySelector("track")) {
-                    alert("Warning: Some videos do not have captions. Please add subtitles for accessibility.");
-                }
-            });
-
-            audios.forEach(audio => {
-                if (!audio.nextElementSibling || !audio.nextElementSibling.matches("details")) {
-                    alert("Warning: Some audio files do not have transcripts. Please add a transcript for accessibility.");
-                }
-            });
-        });
-</script>
 
 </body>
 
