@@ -95,9 +95,10 @@
       <!-- Video 1 -->
       <div>
         <h3>Video 1: Coastal Protection</h3>
-        <video controls aria-labelledby="transcript1">
+        <video controls >
             <source src="./image/gallery/Video/video1.mp4" type="video/mp4">
             <track src="./captions/video1.vtt" kind="captions" srclang="en" label="English Captions">
+            <track src="./descriptions/video1.vtt" kind="descriptions" srclang="en" label="Audio Description">
             Your browser does not support the video tag.
         </video>
         <button class="toggle-btn" onclick="toggleTranscript('transcript1')">Show Transcript</button>
@@ -109,7 +110,7 @@
     <!-- Audio 1 -->
     <div>
         <h3>Audio 1: Coastal Report</h3>
-        <audio controls aria-labelledby="transcriptA1">
+        <audio controls>
             <source src="./media/audio1.mp3" type="audio/mp3">
             Your browser does not support the audio tag.
         </audio>
@@ -118,7 +119,6 @@
             <strong>Transcript:</strong> "This is a spoken report on the current status of coastal erosion."
         </div>
     </div>
-
 
 
       <!-- <div class="gallery-item">
@@ -285,6 +285,13 @@
   function toggleTranscript(id) {
             var transcript = document.getElementById(id);
             transcript.style.display = (transcript.style.display === "none" || transcript.style.display === "") ? "block" : "none";
+        }
+
+        function stopAudioVideo() {
+            document.querySelectorAll("video, audio").forEach(media => {
+                media.pause();
+                media.currentTime = 0;
+            });
         }
 </script>
 
