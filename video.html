@@ -93,18 +93,35 @@
     </div>
     <div class="gallery">
       <!-- Video 1 -->
-      <div class="gallery-item">
-          <h3>Coastal Protection Overview</h3>
-          <video controls aria-labelledby="transcript1">
-              <source src="./image/gallery/Video/video1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
-          <button class="toggle-btn" onclick="toggleTranscript('transcript1')">Show Transcript</button>
-          <div id="transcript1" class="transcript">
-              <strong>Transcript:</strong> "This video explains how coastal protection structures help prevent erosion. [Background waves crashing]. The narrator discusses different breakwater structures."
-          </div>
-      </div>
-      <div class="gallery-item">
+      <div>
+        <h3>Video 1: Coastal Protection</h3>
+        <video controls aria-labelledby="transcript1">
+            <source src="./image/gallery/Video/video1.mp4" type="video/mp4">
+            <track src="./captions/video1.vtt" kind="captions" srclang="en" label="English Captions">
+            Your browser does not support the video tag.
+        </video>
+        <button class="toggle-btn" onclick="toggleTranscript('transcript1')">Show Transcript</button>
+        <div id="transcript1" class="transcript">
+            <strong>Transcript:</strong> "This video explains how coastal protection structures help prevent erosion."
+        </div>
+    </div>
+
+    <!-- Audio 1 -->
+    <div>
+        <h3>Audio 1: Coastal Report</h3>
+        <audio controls aria-labelledby="transcriptA1">
+            <source src="./media/audio1.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+        <button class="toggle-btn" onclick="toggleTranscript('transcriptA1')">Show Transcript</button>
+        <div id="transcriptA1" class="transcript">
+            <strong>Transcript:</strong> "This is a spoken report on the current status of coastal erosion."
+        </div>
+    </div>
+
+
+
+      <!-- <div class="gallery-item">
         <video  autoplay loop muted playsinline>
           <source src="./image/gallery/Video/video1.mp4" type="video/mp4">
         </video>
@@ -118,10 +135,10 @@
         <video  autoplay loop muted playsinline >
           <source src="./image/gallery/Video/video9.mp4" type="video/mp4">
         </video>
-      </div>
+      </div> -->
 
       <!-- Second row -->
-      <div class="gallery-item">
+      <!-- <div class="gallery-item">
         <video  autoplay loop muted playsinline >
           <source src="./image/gallery/Video/video4.mp4" type="video/mp4">
         </video>
@@ -140,10 +157,10 @@
         <video  autoplay loop muted playsinline >
           <source src="./image/gallery/Video/video7.mp4" type="video/mp4">
         </video>
-      </div>
+      </div> -->
 
       <!-- Third row -->
-      <div class="gallery-item">
+      <!-- <div class="gallery-item">
         <video  autoplay loop muted playsinline>
           <source src="./image/gallery/Video/video4.mp4" type="video/mp4">
         </video>
@@ -162,7 +179,7 @@
         <video  autoplay loop muted playsinline >
           <source src="./image/gallery/Video/video7.mp4" type="video/mp4">
         </video>
-      </div>
+      </div> -->
     </div>
   </main>
   <!-- /////////////////////////////////////////Footer contained///////////////////////////////// -->
@@ -266,9 +283,9 @@
 
 <script>
   function toggleTranscript(id) {
-      var transcript = document.getElementById(id);
-      transcript.style.display = (transcript.style.display === "none" || transcript.style.display === "") ? "block" : "none";
-  }
+            var transcript = document.getElementById(id);
+            transcript.style.display = (transcript.style.display === "none" || transcript.style.display === "") ? "block" : "none";
+        }
 </script>
 
 </body>
