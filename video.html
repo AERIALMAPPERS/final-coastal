@@ -95,30 +95,35 @@
       <!-- Video 1 -->
       <div>
         <h3>Video 1: Coastal Protection</h3>
-        <video controls >
-            <source src="./image/gallery/Video/video1.mp4" type="video/mp4">
-            <track src="./captions/video1.vtt" kind="captions" srclang="en" label="English Captions">
-            <track src="./descriptions/video1.vtt" kind="descriptions" srclang="en" label="Audio Description">
-            Your browser does not support the video tag.
-        </video>
-        <button class="toggle-btn" onclick="toggleTranscript('transcript1')">Show Transcript</button>
-        <div id="transcript1" class="transcript">
-            <strong>Transcript:</strong> "This video explains how coastal protection structures help prevent erosion."
-        </div>
-    </div>
-
-    <!-- Audio 1 -->
-    <div>
-        <h3>Audio 1: Coastal Report</h3>
-        <audio controls>
-            <source src="./media/audio1.mp3" type="audio/mp3">
-            Your browser does not support the audio tag.
-        </audio>
-        <button class="toggle-btn" onclick="toggleTranscript('transcriptA1')">Show Transcript</button>
-        <div id="transcriptA1" class="transcript">
-            <strong>Transcript:</strong> "This is a spoken report on the current status of coastal erosion."
-        </div>
-    </div>
+        <video controls>
+          <source src="./image/gallery/Video/video1.mp4" type="video/mp4">
+          <track src="captions/video1.vtt" kind="subtitles" srclang="en" label="English">
+          Your browser does not support the video tag.
+      </video>
+  
+      <!-- ✅ Transcript for the Video -->
+      <details>
+          <summary>Transcript for Video</summary>
+          <p>[Background music playing] A researcher walks along the beach, collecting water samples.</p>
+      </details>
+  
+      <hr>
+  
+      <!-- ✅ Accessible Audio with Transcript -->
+      <h2>Audio Example</h2>
+      <audio controls>
+          <source src="audio/sample-audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+      </audio>
+  
+      <!-- ✅ Transcript for the Audio -->
+      <details>
+          <summary>Transcript for Audio</summary>
+          <p>[Music fades in] Welcome to our podcast about coastal preservation. Today, we discuss how coastal erosion affects marine life.</p>
+      </details>
+  
+      <hr>
+  
 
 
       <!-- <div class="gallery-item">
@@ -282,17 +287,22 @@
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
-  function toggleTranscript(id) {
-            var transcript = document.getElementById(id);
-            transcript.style.display = (transcript.style.display === "none" || transcript.style.display === "") ? "block" : "none";
-        }
+  document.addEventListener("DOMContentLoaded", function () {
+            let videos = document.querySelectorAll("video");
+            let audios = document.querySelectorAll("audio");
 
-        function stopAudioVideo() {
-            document.querySelectorAll("video, audio").forEach(media => {
-                media.pause();
-                media.currentTime = 0;
+            videos.forEach(video => {
+                if (!video.querySelector("track")) {
+                    alert("Warning: Some videos do not have captions. Please add subtitles for accessibility.");
+                }
             });
-        }
+
+            audios.forEach(audio => {
+                if (!audio.nextElementSibling || !audio.nextElementSibling.matches("details")) {
+                    alert("Warning: Some audio files do not have transcripts. Please add a transcript for accessibility.");
+                }
+            });
+        });
 </script>
 
 </body>
