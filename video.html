@@ -94,15 +94,24 @@
     <div class="gallery">
       <!-- Video 1 -->
       <div>
-        <video controls>
-          <source src="./image/gallery/Video/video1.mp4" type="video/mp4">
-          <track src="captions/video.vtt" kind="subtitles" srclang="en" label="English">
-          Your browser does not support the video tag.
-        </video>
-        <p>Video description: A researcher walks along the beach, collecting water samples.</p>
+          <video controls aria-label="Coastal research video with captions">
+              <source src="./image/gallery/Video/video1.mp4" type="video/mp4">
+              <track src="captions/video.vtt" kind="subtitles" srclang="en" label="English" default>
+              Your browser does not support the video tag.
+          </video>
   
-
-
+          <p>Video description: A researcher walks along the beach, collecting water samples.</p>
+  
+          <!-- Transcript for Accessibility -->
+          <details>
+              <summary>Transcript</summary>
+              <p>[Background music playing]</p>
+              <p>A researcher walks along the beach, collecting water samples.</p>
+              <p>The researcher carefully fills a container with seawater for analysis.</p>
+              <p>Waves crash in the background as the researcher labels the sample.</p>
+          </details>
+      </div>
+  </div>
       <!-- <div class="gallery-item">
         <video  autoplay loop muted playsinline>
           <source src="./image/gallery/Video/video1.mp4" type="video/mp4">
