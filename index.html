@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description"
         content="Explore the Maharashtra Coastline Project with interactive maps, reports, and project data.">
     <title>Coastline Of Maharashtra</title>
     <link rel="icon" type="image/png" href="./image/logo/favicon.png">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
-
 <body>
     <div id="zoomButtons">
         <div class="content">
@@ -24,14 +19,11 @@
             <span id="liveDate"></span>
         </div>
         <div id="google_translate_element" role="region"></div>
-
     </div>
-
-
     <!-- HEADING -->
     <header>
         <div class="header">
-                <img src="./image/logo/logo1.jpeg" alt="Government of India home page">
+            <img src="./image/logo/logo1.jpeg" alt="Government of India home page">
             <h1>Maharashtra Coastline</h1>
             <img src="./image/logo/coastl.png" alt="Maharashtra coastline project logo" id="coastal-logo">
             <div id="govImg">
@@ -67,9 +59,9 @@
         <div class="dropdown">
             <a href="project_data.html" class="dropbtn">Project Data</a>
             <div class="dropdown-content">
-                <a href="sign_up.html">Village Wise Data</a>
-                <a href="taluka_data.html">Taluka Wise Data</a>
-                <a href="district-data.html">District Wise Data</a>
+                <a href="./public/add.html">Village-wise data</a>
+                <a href="taluka_data.html">taluka-wise data</a>
+                <a href="district-data.html">district-wise data</a>
             </div>
         </div>
         <div class="dropdown">
@@ -80,19 +72,15 @@
             </div>
         </div>
     </nav>
-
     <!-- <br> -->
-
     <div class="marquee-container">
         <div class="marquee" role="region">
-            Government of Maharashtra | Maharashtra Coastline Project 2023-2024 | Develop a web-based system to search,
-            view, and
-            download geo-referenced village digital maps ,CRZ maps, ECW of coastal areas,DEM , CONTOUR , DGPS & other
-            details of
-            villages in the coastline area of Maharashtra .
+            Maharashtra Coastline Project 2023-2024 |
+            Government of Maharashtra. Develop a web system to search, view,
+            and download geo-referenced village digital maps, CRZ maps, ECW of coastal areas,
+            DEM, CONTOUR, DGPS, and other details of villages in Maharashtra's coastal area.
         </div>
     </div>
-
     <!-- banner -->
     <div class="banner">
 
@@ -123,30 +111,31 @@
             <div class="head">
                 <h2>Introduction</h2>
                 <hr>
-                <p>Maharashtra is the second most populous and third largest state of India. It spread over 307713 Sq.
-                    Km and situated over west coast Of India
-                    Maharashtra occupies the western and central part of the country and as per statistical data
-                    available,
-                    Maharashtra has long Coastline stretching 720 kilometers along the Arabian Sea, which is
-                    divided,among six districts as under palghar district 110.50,Thane 16.50
-                    Mumbai City & Mumbai Suburban 114.00,Raigad 121.00 Ratnagiri 238.00 ,Sindhudurg 120.00 Total 720.00.
-                    out of this 720 Kms Coastal length 400 Kms length is naturally protected, & About 320 Kms length is
-                    vulnerable to erosion.out of this,
-                    protection for 145 Kms has been protected by artificial means such as Construction of Anti Sea
-                    Erosion Bund,
-                    Sea Wall, and Beach Nourishment inform Of Geotubes etc. the remaining length is yet to be
-                    protected.<br>
-                    Coastal zone monitoring and management is an important task in sustainable development and
-                    environmental monitoring.
-                    Coast line/ Shoreline is one of the most important linear dynamic features in the earth and its
-                    movement due to erosion and deposition is of great Significance in coastal
-                    zone management such as development of setback planning, hazard zoning,erosion accretion studies,
-                    regional Sediment budgets and modeling of coastal morph dynamics.
-                    From the last few year severe loss has been reported in all coastal District of Maharashtra owing
-                    ingress of tidal water in urban and rural area, due to climate change,
-                    tidal fluctuation, Urbanization etc.
+                <p>Maharashtra is the second most populous and third largest state of India.
+                    It spreads over 307713 Sq. Km sits on the west coast of India.
+                    Maharashtra occupies the western and central part of the country,
+                    and according to the available statistical data, the state boasts a long coastline that stretches
+                    720 kilometers along the Arabian Sea.Six districts divide this coastline as follows:
+                     Palghar district has 110.50 kilometers, Thane has 16.50 kilometers, Mumbai City and Mumbai
+                    Suburban have 114.00 kilometers, Raigad has 121.00 kilometers, Ratnagiri has 238.00 kilometers, and
+                    Sindhudurg has 120.00 kilometers, totaling 720.00 kilometers.</p>
+                <p>Out of this 720 km coastal length, 400 km has natural protection, while
+                    approximately 320 km faces vulnerability to erosion.
+                    Out of this, artificial means such as the construction of anti-sea erosion bunds, sea walls, and
+                    beach nourishment in the form of geotubes have provided
+                    protection for 145 km. The remaining length still needs protection. Coastal zone monitoring and
+                    management is an important task in sustainable development
+                    and environmental monitoring.</p>
+                    <p> Coastline/shoreline is one of the most important linear dynamic
+                    features on the earth, and its movement due to erosion and
+                    deposition is of great significance in coastal zone management, such as the development of setback
+                    planning, hazard zoning, erosion-accretion studies,
+                    regional sediment budgets, and modeling of coastal morphodynamics.
+                     In the last few years, all coastal districts of Maharashtra have reported severe loss
+                    due to the ingress of tidal water in urban and rural areas, caused by climate change, tidal
+                    fluctuation, urbanization, and other factors.
                 </p>
-
+              <br>
             </div>
             <div class="load-button">
                 <button id="load-more" onclick="showAbout()">LOAD MORE</button>
@@ -170,7 +159,6 @@
                                 Region</a></li>
                     </ol>
                 </div>
-
                 <div class="map-img">
                     <img alt="Region img" id="displayedImage" src="./image/about/img3.png">
                     <button id="A1" onclick="displayImage(event,'./image/about/img3.png')">State</button>
@@ -195,8 +183,6 @@
                                 </ol>
                             </div>
                         </div>
-                   
-                        
                     </div>
                     <div class="map_container" id="right_container">
 
@@ -206,7 +192,6 @@
                         </div>
                     </div>
                 </div>
-
             </section>
             <!-- //////////////////////////////////////////////////////News section end ////////////////////////////////////////////////// -->
 
@@ -226,7 +211,7 @@
                     </div>
                     <div class="feature-card">
                         <img src="./image/index/archiving.png" alt="Orthomosaic and DEM Icon">
-                        <h3>Orthomosaic and DEM/DSM Storage</h3>
+                        <h3>Orthomosaic and DEM/DSM storage</h3>
                         <p>Store and manage orthomosaic images, DSM, and DEM data with ease.</p>
                     </div>
                 </div>
@@ -329,10 +314,10 @@
                 <h3><a href="./features.html">Features</a></h3>
                 <ul>
                     <li>Advanced Equipment</li>
-                    <li>Team of Expert</li>
+                    <li>Team of Experts</li>
                     <li>99% Accuracy</li>
                     <li>5x Faster Delivery</li>
-                    <li>One to One Support</li>
+                    <li>One-to-One Support</li>
                 </ul>
             </div>
 
@@ -369,6 +354,7 @@
                 </ul>
             </div>
         </div>
+
         <!-- Footer Images Section -->
         <div class="footer_img">
             <div class="marquee-container" role="region">
@@ -396,16 +382,17 @@
             <p>
                 <a href="https://validator.w3.org/check?uri=https://aerialmappers.github.io/MH-CostalProject/"
                     target="_blank">
-                    <img src="https://www.w3.org/Icons/valid-xhtml10" alt="XHTML 1.0 Validation Icon" height="31" width="88">
+                    <img src="https://www.w3.org/Icons/valid-xhtml10" alt="XHTML 1.0 Validation Icon" height="31"
+                        width="88">
                 </a>
                 <a href="http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Faerialmappers.github.io%2FMH-CostalProject%2F&usermedium=all&vextwarning=&warning=1"
                     target="_blank">
-                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="W3c Css Validation icon" height="31" width="88">
+                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="W3c Css Validation icon" height="31"
+                        width="88">
                 </a>
             </p>
         </div>
     </footer>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./js/zoomInOut.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/liveDate.js"></script>
