@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Explore the Maharashtra Coastline Project with interactive maps, reports, and project data.">
+  <title>Coastline Of Maharashtra</title>
+  <link rel="icon" type="image/png" href="../image/logo/favicon.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.polylinemeasure/2.6.0/Leaflet.PolylineMeasure.min.css" />
+
+
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+  <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
+  <script src="https://unpkg.com/leaflet-fullscreen/dist/Leaflet.fullscreen.min.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <script src="https://unpkg.com/leaflet.polylinemeasure/Leaflet.PolylineMeasure.js"></script>
+  <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.polylinemeasure/Leaflet.PolylineMeasure.css" />
+  <script src="https://unpkg.com/leaflet.polylinemeasure/Leaflet.PolylineMeasure.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.polylinemeasure/2.6.0/Leaflet.PolylineMeasure.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-groupedlayercontrol/0.7.0/leaflet.groupedlayercontrol.min.css" />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-groupedlayercontrol/0.7.0/leaflet.groupedlayercontrol.min.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- <link rel ="stylesheet" href="../css/project_data.css"> -->
+</head>
+
+<body>
+  <div id="zoomButtons">
+    <div class="content">
+      <button onclick="zoomOut()">A-</button>
+      <button onclick="resetZoom()">A</button>
+      <button onclick="zoomIn()">A+</button>
+      |
+      <span id="liveDate"></span>
+    </div>
+    <div id="google_translate_element" role="region"></div>
+
+  </div>
+
+
+  <!-- HEADING -->
+  <header>
+    <div class="header">
+      <img src="../image/logo/logo1.jpeg" alt="Government of India home page">
+      <h1>Maharashtra Coastline</h1>
+      <img src="../image/logo/coastl.png" alt="Maharashtra coastline project logo" id="coastal-logo">
+      <div id="govImg">
+        <img src="../image/index/75th.jpg" alt="75th Independence anniversary logo">
+        <img src="../image/index/g20.jpg" alt="G20 India summit logo">
+        <img src="../image/index/mygov.png" alt="MyGov India official logo">
+        <img src="../image/index/skillindia.png" alt="Skill india portal logo">
+        <img src="../image/index/bhartsarkar.png" alt="bharat sarkar portal logo">
+      </div>
+      <!-- <button class="login-button" onclick="window.location.href='login.html'">Login</button>
+        <button class="signup-button" onclick="window.location.href='sign_up.html'">Sign_Up</button> -->
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="../index.html" class="active">Home</a>
+    <a href="../about.html">About</a>
+    <div class="dropdown">
+      <a href="../service.html" class="dropbtn">Technology</a>
+      <div class="dropdown-content">
+        <a href="../mobileapp.html">Mobile-App</a>
+      </div>
+    </div>
+    <a href="../features.html">Report</a>
+    <div class="dropdown">
+      <a class="dropbtn">Gallery</a>
+      <div class="dropdown-content">
+        <a href="../gallery.html">Photo Gallery</a>
+        <a href="../video.html">Video Gallery</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="dropbtn">Project Data</a>
+      <div class="dropdown-content">
+        <a href="./add.html">Village-wise data</a>
+        <a href="taluka_data.html">taluka-wise data</a>
+        <a href="district-data.html">district-wise data</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="contact.html" class="dropbtn">Contact-Us</a>
+      <div class="dropdown-content">
+        <a href="feedback.html">Feedback</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <br> -->
+
+  <div class="marquee-container">
+    <div class="marquee" role="region">
+      Maharashtra Coastline Project 2023-2024 |
+      Government of Maharashtra. Develop a web system to search, view,
+      and download geo-referenced village digital maps, CRZ maps, ECW of coastal areas,
+      DEM, CONTOUR, DGPS, and other details of villages in Maharashtra's coastal area.
+    </div>
+  </div>
+
+  <!-- ===============================start data logic ================================================ -->
+  <!-- <h1>Coastline of Maharashtra</h1> -->
+  <main>
+  <!-- <div id="map-container"> -->
+    <div id="controls">
+      <div id="dropdown">
+        <br>
+                <h2>Coastline of Maharashtra</h2>
+                <br>
+                <h3>Village-Wise-Data</h3>
+                <br>
+        <!-- <h2>Village-Wise Data</h2> -->
+        <!-- <label for="updateDistrict">District:</label> -->
+        <label for="district">District:</label>
+        <select id="district" onchange="loadTalukas()" required>
+          <option value="">Select District</option>
+        </select>
+
+        <!-- <label for="taluka">Taluka:</label> -->
+        <label for="taluka">Taluka:</label>
+        <select id="taluka" onchange="loadVillages()" required>
+          <option value="">Select Taluka</option>
+        </select>
+
+        <!-- <label for="village">Village:</label> -->
+        <label for="village">Village:</label>
+        <select id="village" onchange="loadLayers()" required>
+          <option value="">Select Village</option>
+        </select>
+        <button class="button" onclick="viewVillage()">View Data <img width="15" height="15"
+            src="https://img.icons8.com/material-rounded/24/visible.png" alt="eye-symbol" /></button>
+        <button class="button" onclick="downloadFiles()">Download <img width="15" height="15"
+            src="https://img.icons8.com/material-rounded/24/download--v1.png" alt="download--v1" /> </button>
+
+        <button class="button" onclick="openAddDataModal()">Add Data <img width="15" height="15"
+            src="https://img.icons8.com/ios/24/plus.png" alt="add-icon" /></button>
+        <button class="button" onclick="openUpdateDataModal()">Update Data <img width="15" height="15"
+            src="https://img.icons8.com/material-rounded/24/available-updates.png" alt="update-icon" /></button>
+
+        <!-- ================================================ -->
+        <div class="container">
+          <div class="color-item">
+            <div class="color-box" style="background-color: #1df528;"></div>
+            <div class="color-text"> Village Boundry</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #e90f0f;"></div>
+            <div class="color-text"> Artificially Protected Coastline</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #e8eb1d;"></div>
+            <div class="color-text"> Naturally Protecte Coastline</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #27d4da;"></div>
+            <div class="color-text">Unprotected Coastline </div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #dac827;"></div>
+            <div class="color-text">Vulnerability Coastline</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #da27d1;"></div>
+            <div class="color-text">High Tide Line</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #1f22f1;"></div>
+            <div class="color-text">Low Tide Line</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #4b0534;"></div>
+            <div class="color-text">Bund</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #df7117;"></div>
+            <div class="color-text">Seawall</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #0c0a9e;"></div>
+            <div class="color-text">Port/Harbour</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #da2727;"></div>
+            <div class="color-text">Hazard Line</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #947306e5;"></div>
+            <div class="color-text">Sand Dune</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #eeb20f;"></div>
+            <div class="color-text">Eco Sensitive Zone</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #088f45f8;"></div>
+            <div class="color-text">Mangroves</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #13ce96;"></div>
+            <div class="color-text">Buffer Zone</div>
+          </div>
+          <!-- <div class="color-item">
+              <div class="color-box" style="background-color: #d8bc20;"></div>
+              <div class="color-text">DGPS Control Point</div>
+          </div> -->
+          <div class="color-item">
+            <div class="color-box" style="background-color: #d8bc20;"></div>
+            <div class="color-text">Pillar Location</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #d8bc20;"></div>
+            <div class="color-text">Year wise Coastline</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #41b6b6e5;"></div>
+            <div class="color-text">Creek</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #2be7e7;"></div>
+            <div class="color-text">River</div>
+          </div>
+          <div class="color-item">
+            <div class="color-box" style="background-color: #e232cb;"></div>
+            <div class="color-text">Jetty</div>
+          </div>
+
+          <div class="color-item">
+            <div class="color-box" style="background-color: #f507e1;"></div>
+            <div class="color-text">Breakwater Structure</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkbox-group" id="checkbox">
+        <h3>Layer Selection:</h3>
+        <label><input type="checkbox" name="layer" value="chainage" id="layer"> Chainage</label>
+        <label><input type="checkbox" name="layer" value="village_map" id="layer"> Georeference Village map</label>
+        <label><input type="checkbox" name="layer" value="high_tide_line" id="layer"> High Tide Line</label>
+        <label><input type="checkbox" name="layer" value="low_tide_line" id="layer"> Low Tide Line</label>
+        <label><input type="checkbox" name="layer" value="hazard_line" id="layer"> Hazard Line</label>
+        <label><input type="checkbox" name="layer" value="bund" id="layer"> Bund</label>
+        <label><input type="checkbox" name="layer" value="sea_wall" id="layer"> Sea Wall</label>
+        <label><input type="checkbox" name="layer" value="buffer_zone" id="layer"> Buffer Zone</label>
+        <label><input type="checkbox" name="layer" value="ecosensitive_zone" id="layer"> Ecosensitive Zone</label>
+        <label><input type="checkbox" name="layer" value="mangroves" id="layer"> Mangroves</label>
+        <label><input type="checkbox" name="layer" value="ferry_location" id="layer"> Ferry Location</label>
+        <label><input type="checkbox" name="layer" value="port_harbour" id="layer"> Port/Harbour</label>
+        <label><input type="checkbox" name="layer" value="breakwater_structure" id="layer"> BreakWater Structure</label>
+        <label><input type="checkbox" name="layer" value="creek" id="layer"> Creek</label>
+        <label><input type="checkbox" name="layer" value="river" id="layer"> River</label>
+        <label><input type="checkbox" name="layer" value="jetty" id="layer"> Jetty</label>
+        <label><input type="checkbox" name="layer" value="artifically_protected_line" id="layer"> Artificially Protected Line</label>
+        <label><input type="checkbox" name="layer" value="naturally_protected_line" id="layer"> Naturally Protected Line</label>
+        <label><input type="checkbox" name="layer" value="unprotected_line" id="layer"> UnProtected Line</label>
+        <label><input type="checkbox" name="layer" value="ecw" id="layer"> ECW</label>
+        <label><input type="checkbox" name="layer" value="dem" id="layer"> DEM</label>
+        <label><input type="checkbox" name="layer" value="dtm" id="layer"> DTM</label>
+        <label><input type="checkbox" name="layer" value="contour_map" id="layer"> CONTOUR</label>
+        <label><input type="checkbox" name="layer" value="pillar_location" id="layer"> Pillar Location</label>
+        <label><input type="checkbox" name="layer" value="topoplan" id="layer"> Topoplan</label>
+        <label><input type="checkbox" name="layer" value="year_wise_coastline" id="layer"> Year Wise Coastline</label>
+        <label><input type="checkbox" name="layer" value="coastal_vulnerability" id="layer"> Coastal Vulnerability</label>
+        <label><input type="checkbox" name="layer" value="short_term" id="layer"> Short Term</label>
+        <label><input type="checkbox" name="layer" value="long_term" id="layer"> Long Term</label>
+      </div>
+    </div>
+    <!-- <div id="map"></div> -->
+    <div class="map-main">
+      <!-- Google Earth GIF or other content goes here -->
+      <!-- <img src="./video/google earth.gif" alt="Google Earth GIF" id="earthGif"> -->
+      <div id="map-container"></div>
+  </div>
+</div>
+
+</main>
+  <!-- Add Data Modal -->
+  <div id="addDataModal" class="modal">
+    <div class="modal-content">
+      <h2>Add New Data</h2>
+      <form id="addDataForm" enctype="multipart/form-data">
+        <label for="addDistrict">District:</label>
+        <input type="text" id="addDistrict" name="district" placeholder="Enter District" required>
+
+        <label for="addTaluka">Taluka:</label>
+        <input type="text" id="addTaluka" name="taluka" placeholder="Enter Taluka" required>
+
+        <label for="addVillage">Village:</label>
+        <input type="text" id="addVillage" name="village" placeholder="Enter Village" required>
+
+        <label for="selectLayer">Select Layer:</label>
+        <select id="selectLayer" name="selectLayer" required>
+          <option value="chainage">Chainage</option>
+          <option value="village_map">Georeference Village map</option>
+          <option value="high_tide_line">High Tide Line</option>
+          <option value="low_tide_line">Low Tide Line</option>
+          <option value="hazard_line">Hazard Line</option>
+          <option value="bund">Bund</option>
+          <option value="sea_wall">Sea Wall</option>
+          <option value="buffer_zone">Buffer Zone</option>
+          <option value="ecosensitive_zone">Ecosensitive Zone</option>
+          <option value="mangroves">Mangroves</option>
+          <option value="ferry_location">Ferry Location</option>
+          <option value="port_harbour">Port/Harbour</option>
+          <option value="breakwater_structure">BreakWater Structure</option>
+          <option value="creek">Creek</option>
+          <option value="river">River</option>
+          <option value="jetty">Jetty</option>
+          <option value="artifically_protected_line">Artificially Protected Line</option>
+          <option value="naturally_protected_line">Naturally Protected Line</option>
+          <option value="unprotected_line">UnProtected Line</option>
+          <option value="ecw">ECW</option>
+          <option value="dem">DEM</option>
+          <option value="dtm">DTM</option>
+          <option value="contour_map">CONTOUR</option>
+          <option value="pillar_location">Pillar Location</option>
+          <option value="topoplan">Topoplan</option>
+          <option value="year_wise_coastline">Year Wise Coastline</option>
+          <option value="coastal_vulnerability">Coastal Vulnerability</option>
+          <option value="short_term">Short Term</option>
+          <option value="long_term">Long Term</option>
+        </select>
+        <label for="addKMLFile">KML File:</label>
+        <input type="file" id="addKMLFile" name="kml_path" accept=".kml" required>
+        <label for="addDWGFile">DWG File:</label>
+        <input type="file" id="addDWGFile" name="dwg_path" accept=".dwg" required>
+        <button type="submit" class="button">Add</button>
+        <button type="button" class="button" onclick="closeAddDataModal()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  <!--===========================================Update Data Modal=================================== -->
+  <!-- Update Data Modal -->
+  <div id="updateDataModal" class="modal">
+    <div class="modal-content">
+      <h2>Update Data</h2>
+      <form id="updateDataForm">
+        <label for="updateDistrict">District:</label>
+        <select id="updateDistrict" onchange="loadTalukasForUpdate()" required>
+          <option value="">Select District</option>
+        </select>
+
+        <label for="updateTaluka">Taluka:</label>
+        <select id="updateTaluka" onchange="loadVillagesForUpdate()" required>
+          <option value="">Select Taluka</option>
+        </select>
+
+        <label for="updateVillage">Village:</label>
+        <select id="updateVillage" onchange="loadLayersForUpdate()" required>
+          <option value="">Select Village</option>
+        </select>
+
+        <label for="updateLayer">Select Layer to Update:</label>
+        <select id="updateLayer" required>
+          <option value="">Select Layer</option>
+        </select>
+
+        <label for="updateKMLFile">New KML File:</label>
+        <input type="file" id="updateKMLFile" accept=".kml" required>
+
+        <label for="updateDWGFile">New DWG File:</label>
+        <input type="file" id="updateDWGFile" accept=".dwg" required>
+
+        <button type="submit" class="button">Update Data</button>
+        <button type="button" class="button" onclick="closeUpdateDataModal()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  <!--================================================= end data logic ============================================================= -->
+  <footer>
+    <div class="footer-container">
+      <!-- Services Section -->
+      <div class="service1">
+        <h3><a href="./service.html">Technology</a></h3>
+        <ul>
+          <li>Lidar Technology</li>
+          <li>Bathymetry Technology</li>
+        </ul>
+      </div>
+      <!-- Features Section -->
+      <div class="features">
+        <h3><a href="./features.html">Features</a></h3>
+        <ul>
+          <li>Advanced Equipment</li>
+          <li>Team of Experts</li>
+          <li>99% Accuracy</li>
+          <li>5x Faster Delivery</li>
+          <li>One-to-One Support</li>
+        </ul>
+      </div>
+      <!-- Policies Section -->
+      <div class="policies">
+        <h3>People and Policies</h3>
+        <ul>
+          <li><a href="./disclaimer.html">Disclaimer </a></li>
+          <li><a href="./policy.html">Privacy Policy</a></li>
+          <li><a href="https://igod.gov.in/">GOI Web Directory</a></li>
+        </ul>
+      </div>
+
+      <!-- Planning Section -->
+      <div class="planning">
+        <h3><a href="./planning.html">Planning</a></h3>
+        <ul>
+          <li>Scheduling</li>
+          <li>Planning</li>
+        </ul>
+      </div>
+
+      <!-- Contact Details Section -->
+      <div class="contact-details">
+        <h3><a href="contact.html">Contact Details</a></h3>
+        <ul>
+          <li>
+            <p>Harbour Engineer, Harbour Engineering Division, Konkan Bhavan, Navi Mumbai (New Mumbai)
+              400614.</p>
+          </li>
+          <li>
+            <p>Contact No: +91 22 2757 1537</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Footer Images Section -->
+    <div class="footer_img">
+      <div class="marquee-container" role="region">
+        <div class="marquee-1">
+          <img src="../image/footer/footerdigitalindia.jpg" alt="Digital India initiative logo in footer">
+          <img src="../image/footer/footermurda.png" alt="Mudra Yojana logo in footer">
+          <img src="../image/footer/footerswachbhart.webp" alt="Swachh Bharat Abhiyan logo in footer">
+          <img src="../image/footer/footerskillindia.png" alt="Skill India initiative logo in footer">
+          <img src="../image/footer/footerg20.jpg" alt="G20 India Summit logo in footer">
+          <img src="../image/footer/footerindianpost.png" alt="India Post logo in footer">
+          <img src="../image/footer/footeraashar.png" alt="Aadhaar India logo in footer">
+          <img src="../image/footer/footersatyamevjayte.jpg" alt="Satyamev Jayate emblem in footer">
+        </div>
+      </div>
+    </div>
+    <!-- Copyright Section -->
+    <div class="copyright">
+      &copy; 2023 Maharashtra Coastal | Harbour Engineering Division, Konkan Bhavan, Navi Mumbai | All rights
+      reserved.
+    </div>
+    <!-- W3C CSS Validator Section -->
+    <div class="w3">
+      <p>
+        <a href="https://validator.w3.org/check?uri=https://aerialmappers.github.io/MH-CostalProject/" target="_blank">
+          <img src="https://www.w3.org/Icons/valid-xhtml10" alt="XHTML 1.0 Validation Icon" height="31" width="88">
+        </a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Faerialmappers.github.io%2FMH-CostalProject%2F&usermedium=all&vextwarning=&warning=1"
+          target="_blank">
+          <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="W3c Css Validation icon" height="31"
+            width="88">
+        </a>
+      </p>
+    </div>
+  </footer>
+  <script src="../js/zoomInOut.js"></script>
+  <!-- <script src="./js/"></script> -->
+  <script src="../js/liveDate.js"></script>
+  <script src="../js/translate.js"></script>
+
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

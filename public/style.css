@@ -1,0 +1,445 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+
+  main {
+    width: 100%;
+    /* height: 85vh; */
+    height: auto;
+    color:#000000; 
+    background-color:rgb(238, 246, 255);
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    /* background-image: url('/image/bg1.jpg');  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+/* .map-main {
+  width: 75%;
+  display: flex;
+  margin-bottom: 2%;
+} */
+  /* #map-container {
+   width: 95%;
+    height: auto;
+    margin-top: 2.5%;
+    margin-left: 2%;
+    border:1px solid black;
+
+
+  } */
+  #controls {
+    width: 25%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+ display: flex;
+    justify-content: center;
+}
+  
+  /* #map {
+    flex: 1;
+    
+    border: 2px solid #000000;
+  } */
+
+.map-main {
+    width: 75%;
+    display: flex;
+    margin-bottom: 2%;
+}
+#map-container{
+    width: 95%;
+    height: auto;
+    margin-top: 2.5%;
+    margin-left: 2%;
+    border:1px solid black;
+
+}
+
+  h1 {
+    text-align: center;
+  }
+  #dropdown{
+    border: 1px solid black; 
+  }
+  #dropdown h2,h3{
+    text-align: center;
+    color: #000;
+  }
+
+  .button {
+    /* display: flex;  */
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    /* margin-left: 10%; */
+    padding: 5px 10px;
+    background-color: #132574;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .button img {
+    filter: invert(1);
+}
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  select
+   {
+    width: 90%;
+    margin: 5px 0;
+    font-size: 1.2rem;
+  }
+  .checkbox-group {
+    width: 125%;
+    margin-top: 0px;
+    margin-left: 2%;
+    border: 2px solid #010101;
+  }
+  .checkbox-group label {
+    color: black;
+    font-size: 14px;
+    padding: 4px;
+    display: block;  /*Each label on a new line */
+   align-self: start;
+   /* margin-top: -5px; */
+  }
+  .checkbox-group h3  {
+    margin-top: 10px;
+    text-align: center;
+    color: #000;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  .modal-content {
+    background: white;
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; 
+}
+
+ .color-item {
+  display: flex; 
+  padding: 1px;
+  align-items: center;
+  margin-bottom: 5px; 
+   
+}
+
+.color-box {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    /* border-radius: 50%; */
+    border: 0.5px solid #000; 
+}
+
+.color-text {
+    font-size: 13px;
+    color: #000;
+  
+} 
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000;
+  display: block; /* Ensures the label appears above the dropdown */
+}
+  /* ------------------------------------------------------------------------------------------------------- */
+  /* mobile view =============================================================================================*/
+@media only screen and (min-width: 300px)and (max-width: 600px) {
+  main {
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color:rgb(238, 246, 255);
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+}
+
+  #controls {
+    width: 98%;
+        margin-top: 2%;
+        border: 1px solid black;
+        background-color: rgb(234, 235, 235);
+     display: flex;
+        justify-content: center;
+  }
+  .map-main {
+    width: 98%;
+    height: 450px;
+    display: flex;
+}
+#map-container{
+  width: 95%;
+  height: 450px;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  border:1px solid black;
+}
+  h1 {
+    text-align: center;
+  }
+  #dropdown{
+    width: 50%;
+    margin-left: 2%;
+  }
+  .button {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #120e49;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  select
+   {
+    /* margin-left: 10%; */
+    width: 90%;
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  #checkbox {
+    margin-top: -10px;
+    /* margin-left: 5%; */
+
+    /* background-color: #007bff; */
+  }
+  #checkbox label {
+    display: block;
+    /* gap: 1px; */
+    font-size: 0.6rem;
+    margin-bottom: 0px;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  .modal-content {
+    background: white;
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+
+}
+/* Tablet View ================================================================================================================*/
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  #map-container {
+    display: flex;
+     height: 80vh;
+  }
+  #controls {
+    width: 35%;
+    background-color: #f4f4f9;
+    /* border: 1; */
+    border: 2px solid #010101;
+    border-right: none;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #map {
+    /* width: 30%; */
+    flex: 1;
+    /* height: 80vh; */
+    border: 2px solid #000000;
+  }
+  h1 {
+    text-align: center;
+  }
+  #dropdown{
+    width: 50%;
+    border: 2px solid #010101;
+    margin-left: 2%;
+  }
+  .button {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    /* margin-left: 25%; */
+    padding: 5px 10px;
+    background-color:#120e49;;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  select
+   {
+    /* margin-left: 10%; */
+    width: 90%;
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  #checkbox {
+    margin-top: 10px;
+    /* margin-left: 5%; */
+
+    /* background-color: #007bff; */
+  }
+  #checkbox label {
+    display: block;
+    /* gap: 1px; */
+    font-size: 0.6rem;
+    margin-bottom: 0px;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  .modal-content {
+    background: white;
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+/* 750 to 950   ==================================================================================================== */
+@media only screen and (min-width: 750px) and (max-width: 950px) {
+
+}
+
+/* 950 to 1100   ========================================================================================================== */
+@media only screen and (min-width: 950px) and (max-width: 1100px) {
+
+ 
+}
+/* laptop view  ================================================================================================================== */
+@media only screen and (min-width: 1000px) and (max-width: 1550px) {
+  #map-container {
+    display: flex;
+     height: 80vh;
+  }
+  #controls {
+    width: 35%;
+    background-color: #f4f4f9;
+    /* border: 1; */
+    border: 2px solid #010101;
+    border-right: none;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #map {
+    /* width: 30%; */
+    flex: 1;
+    /* height: 80vh; */
+    border: 2px solid #000000;
+  }
+  h1 {
+    text-align: center;
+  }
+  #dropdown{
+    width: 50%;
+    /* border: 2px solid #010101; */
+    margin-left: 2%;
+  }
+  .button {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 25%;
+    padding: 5px 10px;
+    background-color:#120e49;;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  select
+   {
+    /* margin-left: 10%; */
+    width: 90%;
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  #checkbox {
+    margin-top: 10px;
+    /* margin-left: 5%; */
+
+    /* background-color: #007bff; */
+  }
+  #checkbox label {
+    display: block;
+    /* gap: 1px; */
+    font-size: 0.6rem;
+    margin-bottom: 0px;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  .modal-content {
+    background: white;
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+ 
+}

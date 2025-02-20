@@ -1,0 +1,149 @@
+{
+  "districts": [
+    {
+      "name": "Palghar",
+      "talukas": [
+        {
+          "name": "Talasari",
+          "villages": [
+            {
+              "name": "vikasnagaer",
+              "layers": [
+                {
+                  "layerName": "buffer_zone",
+                  "kmlPath": "/uploads/ ../data/kml/ZAI buffer.kml",
+                  "dwgPath": "/uploads/ ../data/dwg/DAHANU break.dwg"
+                },
+                {
+                  "layerName": "ecosensitive_zone",
+                  "kmlPath": "/uploads/ ../data/kml/ZAI eca.kml",
+                  "dwgPath": "/uploads/../data/dwg/ZAI buffer.dwg"
+                },
+                {
+                  "layerName": "mangroves",
+                  "kmlPath": "/uploads/../data/kml/ZAI mangroce.kml",
+                  "dwgPath": "/uploads/../data/dwg/ZAI pillar.dwg"
+                },
+                {
+                  "layerName": "ferry_location",
+                  "kmlPath": "/uploads/1737520788212-ZAI mangroce.kml",
+                  "dwgPath": "/uploads/1737520788213-zai_sea_wall.dwg"
+                },
+                {
+                  "layerName": "chainage",
+                  "kmlPath": "/uploads/1737520527720-ZAI upc.kml",
+                  "dwgPath": "/uploads/1737520527721-Zai_buffer_zone (1).dwg"
+                }
+              ]
+            },
+            {
+              "name": "Zai",
+              "layers": [
+                {
+                  "layerName": "buffer_zone",
+                  "kmlPath": "/uploads/../data/kml/ZAI buffer.kml",
+                  "dwgPath": "/uploads/../data/dwg/DAHANU break.dwg"
+                },
+                {
+                  "layerName": "ecosensitive_zone",
+                  "kmlPath": "/uploads/../data/kml/ZAI eca.kml",
+                  "dwgPath": "/uploads/../data/dwg/ZAI buffer.dwg"
+                },
+                {
+                  "layerName": "mangroves",
+                  "kmlPath": "/uploads/../data/kml/ZAI mangroce.kml",
+                  "dwgPath": "/uploads/../data/dwg/ZAI pillar.dwg"
+                },
+                {
+                  "layerName": "ferry_location",
+                  "kmlPath": "/uploads/../data/kml/ZAI ch.kml",
+                  "dwgPath": "/uploads/../data/dwg/ZAI hazaed.dwg"
+                },
+                {
+                  "layerName": "hazard_line",
+                  "kmlPath": "/uploads/  ",
+                  "dwgPath": "/uploads/1737448834427-zai_sea_wall.dwg"
+                },
+                {
+                  "layerName": "chainage",
+                  "kmlPath": "/uploads/1737606887023-ZAI.kml",
+                  "dwgPath": "/uploads/1737606887023-zai_sea_wall (1).dwg"
+                },
+                {
+                  "layerName": "village_map",
+                  "kmlPath": "/uploads/1737723775096-ZAI pillar.kml",
+                  "dwgPath": "/uploads/1737723775096-Zai_river.dwg"
+                }
+              ]
+            },
+            {
+              "name": "tarapur",
+              "layers": [
+                {
+                  "layerName": "buffer_zone",
+                  "kmlPath": "/uploads/ ../data/kml/ZAI buffer.kml",
+                  "dwgPath": "/uploads/ ../data/dwg/DAHANU break.dwg"
+                },
+                {
+                  "layerName": "ecosensitive_zone",
+                  "kmlPath": "/uploads/1738298344491-ZAI mangroce.kml",
+                  "dwgPath": "/uploads/1738298344492-Zai_low_tide_line.dwg"
+                },
+                {
+                  "layerName": "mangroves",
+                  "kmlPath": "/uploads/../data/kml/ZAI mangroce.kml",
+                  "dwgPath": "/uploads/../data/dwg/ZAI pillar.dwg"
+                },
+                {
+                  "layerName": "ferry_location",
+                  "kmlPath": "/uploads/1737520788212-ZAI mangroce.kml",
+                  "dwgPath": "/uploads/1737520788213-zai_sea_wall.dwg"
+                },
+                {
+                  "layerName": "chainage",
+                  "kmlPath": "/uploads/1737520527720-ZAI upc.kml",
+                  "dwgPath": "/uploads/1737520527721-Zai_buffer_zone (1).dwg"
+                },
+                {
+                  "layerName": "village_map",
+                  "kmlPath": "/uploads/1738298169039-ZAI pillar.kml",
+                  "dwgPath": "/uploads/1738298169039-Karli_ecosensitive_zone.dwg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Dahanu",
+          "villages": [
+            {
+              "name": "Bordi",
+              "layers": [
+                {
+                  "layerName": "chainage",
+                  "kmlPath": "/uploads/1737443109427-ZAI mangroce.kml",
+                  "dwgPath": "/uploads/1737443109446-zai_sea_wall.dwg"
+                },
+                {
+                  "layerName": "village_map",
+                  "kmlPath": "/uploads/1737442008003-ZAI hazard.kml",
+                  "dwgPath": "/uploads/1737442008003-Zai_ecosensitive_zone (2).dwg"
+                },
+                {
+                  "layerName": "high_tide_line",
+                  "kmlPath": "/uploads/1737442981774-ZAI pillar.kml",
+                  "dwgPath": "/uploads/1737442981775-Zai_ecosensitive_zone (2).dwg"
+                },
+                {
+                  "layerName": "hazard_line",
+                  "kmlPath": "/uploads/1737448834427-ZAI pillar.kml",
+                  "dwgPath": "/uploads/1737448834427-zai_sea_wall.dwg"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
